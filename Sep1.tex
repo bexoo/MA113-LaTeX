@@ -1,0 +1,158 @@
+\documentclass[12pt]{article}
+
+% Include math
+\usepackage{amsmath,amsthm,amssymb}
+% Include links
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%  THEOREMS  %%%%%%%%%%%%%%%%%
+\theoremstyle{plain} % other options: definition, remark
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+% By including [theorem], the lemma follows the numbering of theorem
+% e.g. Thm 1, Lemma 2, Thm 3, Thm 4, \dots
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition} % the star prevents numbering
+
+% Remarks
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+
+
+
+%%%%%%%%%%%%%%  PAGE SETUP %%%%%%%%%%%%%%%%%
+% LaTeX has big default margins
+% The following sets them to 1in
+\usepackage[margin=1.5in]{geometry}
+
+% The following sets up some headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{MA113 Notes} % Left Header
+\rhead{\thepage} % Right Header
+\cfoot{} % Center Foot (empty)
+
+
+
+
+
+
+%%%%%%%%%%%%% SHORTCUTS %%%%%%%%%%%%%%%%%%%%
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+
+% Document content begins here
+\begin{document}
+
+% Set up a title
+\title{MA113 Notes}
+\author{Brady Exoo}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+Notes for the MA 113 (Mutlivariable Calculus) taught by Dr. Holder.
+\end{abstract}
+
+% This line makes a ToC
+\tableofcontents
+
+% This line starts a new page
+\eject
+
+\section{Coordinate Systems and Polar Functions}
+\subsection{Rectangular Coordinates}
+\begin{itemize}
+    \item $(x,y)$
+    \item Every point has only one set of coordinates
+    \item Unique representation!
+\end{itemize}
+\subsection{Polar Coordinates}
+\begin{itemize}
+    \item $(r,\theta)$
+    \begin{itemize}
+        \item $r$ is the distance from the origin
+        \item $\theta$ is the angle the radius faces
+    \end{itemize}
+    \item Lacks unique representation
+    \begin{itemize}
+        \item Can add $2\pi$ to any angle and get the same point
+        \item Can make radius negative and add $\frac{\pi}{2}$ to the angle and get the same point
+    \end{itemize}
+\end{itemize}
+These coordinates are helpful for setting up integrals later.
+\subsection{Transformations}
+\definition{$\tan{\theta}$ is the distance from the intersection of the extended radius and the vertical tangent to the tangent point.}
+\begin{itemize}
+    \item $x^2+y^2=r^2$
+    \item $\tan{\theta} = \frac{y}{x}$
+    \begin{itemize}
+        \item $x=0 \implies \theta \in \{\frac{\pi}{2}, \frac{3\pi}{2}\}$
+    \end{itemize}
+    \eject
+    \item $\theta = \tan^{-1}{\frac{y}{x}}$
+    \begin{itemize}
+        \item $\tan{\theta}$ is the distance from the intersection of the extended radius and the vertical tangent to the tangent point
+        \item This is problematic! Range of arctan is $(\frac{-\pi}{2},\frac{\pi}{2})$, so we do not get all $360$ degrees.
+        \item $ \theta = \begin{cases}
+            \tan^{-1}{\frac{y}{x}} & x\leq 0 \\
+            \frac{\pi}{2} & x=0,y>0 \\
+            \frac{3\pi}{2} & x=0,y<0 \\
+            \tan^{-1}{\frac{y}{x}} + \pi & x < 0
+            \end{cases}
+        $
+    \end{itemize}
+    \item $r\cos{\theta} = x$
+    \item $r\sin{\theta} = y$
+\end{itemize}
+\subsection{Polar Graphs}
+\begin{itemize}
+    \item Graphs are of the form $r(\theta)$, $r$ is a function of $\theta$.
+    \item $r(\theta) = \cos{\theta}-1$ is a cardioid.
+    \item $r(\theta)=\cos{(2\theta)}$ is a $4-$flower.
+    \begin{itemize}
+        \item $\cos{(\text{n}\theta)}$ has $2n$ petals if $n$ is even, $n$ petals if $n$ is odd.
+    \end{itemize}
+\end{itemize}
+\subsection{Differentiating Polar Functions}
+\begin{itemize}
+    \item We come to a problem, we wish to find $\frac{dy}{dx}$ but our functions are in terms of $r$ and $\theta$!
+    \item $\frac{dy}{dx}$ = $\frac{dy/d\theta}{dx/d\theta}$ by the Chain Rule.
+    \begin{itemize}
+        \item Not because we can cancel out the $d\theta$ terms!
+    \end{itemize}
+\end{itemize}
+\subsubsection{Chain Rule}
+The default way the Chain Rule is portrayed is
+\[ \frac{d}{dx} f(g(x)) = f^\prime(g(x)) \cdot g^\prime(x) \text{.} \]
+Other notation is
+\[ \frac{df}{dx} = \frac{df}{dg} \cdot \frac{dg}{dx} \text{.} \]
+The Chain Rule allows us to change variables which we do not wish to differentiate by.
+\subsubsection{Polar Derivatives}
+Now we can substitute $y$ and $x$ with our earlier transformations to get
+\[ \frac{dy}{dx} = \frac{\frac{d}{d\theta}r\sin{\theta}}{\frac{d}{d\theta}r\cos{\theta}} \text{.} \]
+
+\subsection{Arc Lengths}
+In Calculus II, we learned the arclength of a function from $a$ to $b$ as
+\[ \int_a^b{\sqrt{1+(f^\prime(x))^2}dx} \]
+This is somewhat related to
+\[ \frac{d}{dx} \langle x,f(x) \rangle = \langle 1,f^\prime(x) \rangle \]
+\[ || \langle1, f^\prime(x) \rangle || = \sqrt{1+(f^\prime(x))^2} \text{.} \]
+We are essentially integrating the magnitude of the derivative of the vector, which gives us the arclength (think about this visually).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

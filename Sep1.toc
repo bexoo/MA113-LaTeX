@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Coordinate Systems and Polar Functions}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Rectangular Coordinates}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Polar Coordinates}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Transformations}{2}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Polar Graphs}{3}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Differentiating Polar Functions}{3}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Chain Rule}{3}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Polar Derivatives}{4}{subsubsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.6}Arc Lengths}{4}{subsection.1.6}%
