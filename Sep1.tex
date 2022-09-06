@@ -113,6 +113,10 @@ These coordinates are helpful for setting up integrals later.
     \item $r(\theta)=\cos{(2\theta)}$ is a $4-$flower.
     \begin{itemize}
         \item $\cos{(\text{n}\theta)}$ has $2n$ petals if $n$ is even, $n$ petals if $n$ is odd.
+    \item $r = \theta$ is the Archimedes spiral.
+    \begin{itemize}
+        \item This can be generalized by $r = a\theta$.
+    \end{itemize}
     \end{itemize}
 \end{itemize}
 \subsection{Differentiating Polar Functions}
@@ -134,13 +138,38 @@ Now we can substitute $y$ and $x$ with our earlier transformations to get
 \[ \frac{dy}{dx} = \frac{\frac{d}{d\theta}r\sin{\theta}}{\frac{d}{d\theta}r\cos{\theta}} \text{.} \]
 
 \subsection{Arc Lengths}
+\subsubsection{Review}
 In Calculus II, we learned the arclength of a function from $a$ to $b$ as
 \[ \int_a^b{\sqrt{1+(f^\prime(x))^2}dx} \]
 This is somewhat related to
 \[ \frac{d}{dx} \langle x,f(x) \rangle = \langle 1,f^\prime(x) \rangle \]
 \[ || \langle1, f^\prime(x) \rangle || = \sqrt{1+(f^\prime(x))^2} \text{.} \]
-We are essentially integrating the magnitude of the derivative of the vector, which gives us the arclength (think about this visually with the Pythagorean Theorem).
+Here we are essentially integrating the magnitude of the derivative of the vector, which gives us the arclength (think about this visually with the Pythagorean Theorem).
+We can also think of this as ``vectorizing'' the derivative.
+\subsubsection{Polar Arc Length}
+We want to find the arc length of a function in terms of $r(\theta)$.
+\begin{align*}
+    s & = \int_{\theta_1}^{\theta_2}{\lVert \frac{d}{d\theta} \langle r\cos{(\theta)}, r\sin{(\theta)} \rangle \rVert d\theta} \\
+    & = \int_{\theta_1}^{\theta_2}{|| \langle r^\prime\cos{(\theta)} - r\sin{(\theta)}, r^\prime\sin{(\theta)} + r\cos{(\theta)} \rangle || d\theta} \\
+    & = \int_{\theta_1}^{\theta_2}{\sqrt{ (r^\prime\cos{(\theta)} - r\sin{(\theta)})^2+ (r^\prime\sin{(\theta)} + r\cos{(\theta)})^2  } d\theta} \\
+    & = \int_{\theta_1}^{\theta_2}{\sqrt{r^2+ (r^\prime)^2}d\theta}
+\end{align*}
+This is the same as the previous arc length formula, just with substitutions.
 
+\subsection{Polar Area}
+We integrate all the sectors of the function, each of which approximates the sector of a circle,
+each of which has angle $\Delta \theta$ and radius $r(\theta)$. The area of each sector is
+\begin{equation*}
+    (\pi r^2)(\frac{\Delta\theta}{2\pi}) = \frac{1}{2}r^2 \Delta\theta.
+\end{equation*}
+Thus, the total area is
+\[
+    \frac{1}{2} \int_{\theta_1}^{\theta_2}{r(\theta)^2 d\theta}.
+\]
+We can subtract these integrals as needed to find areas between two curves:
+\[
+    \frac{1}{2} \int_{\theta_1}^{\theta_2}{r_2(\theta)^2 - r_1(\theta)^2 d\theta}.
+\]
 
 
 
