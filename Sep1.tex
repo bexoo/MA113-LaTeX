@@ -40,7 +40,12 @@
 
 %%%%%%%%%%%%% SHORTCUTS %%%%%%%%%%%%%%%%%%%%
 \newcommand{\half}{\frac{1}{2}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\angled}[1]{\langle {#1} \rangle}
 \newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+\newcommand\norm[1]{\lVert#1\rVert}
+\newcommand\normx[1]{\Vert#1\Vert}
 
 % Document content begins here
 \begin{document}
@@ -170,6 +175,51 @@ We can subtract these integrals as needed to find areas between two curves:
 \[
     \frac{1}{2} \int_{\theta_1}^{\theta_2}{r_2(\theta)^2 - r_1(\theta)^2 d\theta}.
 \]
+
+\section{Vectors}
+\subsection{Fundamentals}
+\begin{itemize}
+    \item The point $A(1,2)$ to the point $B(6,5)$ is denotated as the vector $\overrightarrow{AB} = \langle 6-1,5-2 \rangle = \langle 5,3 \rangle$.
+    \item Vectors have magnitude and direction.
+    \item Vectors in angle bracket notation are typically assumed to start at the origin.
+    \item Arrow hats represent vectors, some books boldface instead.
+    \begin{itemize}
+        \item Column vectors are also used: $\begin{bmatrix} 5 \\ 3 \end{bmatrix}$
+    \end{itemize}
+    \item Adding vectors is the same as adding their components.
+    \begin{itemize}
+        \item Geometrically, you add tail of one vector to the head of another.
+        \item Can only add vectors in the same number of dimensions.
+        \item $\langle 1,2,0 \rangle + \langle -1,4,8 \rangle = \langle 0,6,3 \rangle$
+    \end{itemize}
+    \item In subtraction you add the negative of the vector.
+    \item Scalar multiplication of a vector is the same as multiplying each component by that scalar.
+    \begin{itemize}
+        \item $3\angled{1,2,0} = \angled{3,6,0}$
+    \end{itemize}
+\end{itemize}
+
+\subsection{Norms}
+\begin{itemize}
+    \item Norms are the length or magnitude of a vector
+    \item $|| \overrightarrow{v} || = \sqrt{v_1^2 + v_2^2 + \dots + r_n^2}$.
+    \item $\angled{1,3,2} = \sqrt{14} \angled{\frac{1}{\sqrt{14}},\frac{3}{\sqrt{14}},\frac{2}{\sqrt{14}}}$.
+    \begin{itemize}
+        \item Generally, this is useful because we separate the norm from the direction (unit vector).
+        \item General form is $|| \vec{v} || (\frac{\vec{v}}{||\vec{v}||})$.
+    \end{itemize}
+    \item Special Vectors
+    \begin{itemize}
+        \item $\vec{i} = \angled{1,0,0}$
+        \item $\vec{j} = \angled{0,1,0}$
+        \item $\vec{k} = \angled{0,0,1}$
+        \item Always assume we are in three dimensions (every vector has $0\overrightarrow{k}$).
+
+    \end{itemize}
+\end{itemize}
+
+
+
 
 
 
