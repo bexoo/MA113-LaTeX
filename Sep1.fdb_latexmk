@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1662660142 "Sep1.tex" "Sep1.pdf" "Sep1" 1662660145
+["pdflatex"] 1663005139 "Sep1.tex" "Sep1.pdf" "Sep1" 1663005141
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -67,6 +67,7 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty" 1636758526 3034 3bfb87122e6fa8758225c0dd3cbaceba ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty" 1636758526 2462 754d6b31b2ab5a09bb72c348ace2ec75 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/size12.clo" 1636758526 8449 bc7344e882df4d7e51c046514dee83e4 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty" 1561238569 51697 f8f08183cd2080d9d18a41432d651dfb ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty" 1612734021 17086 7ed8cbc4d361ec87392817e0dd4f65ec ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty" 1622581934 2671 4de6781a30211fe0ea4c672e4a2a8166 ""
@@ -86,10 +87,10 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1661659017 2826436 6a24539fd99d6ff22c0679e7dfb06a35 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Sep1.aux" 1662660144 2541 ae9007c1ff73949d3530d79a79846fd8 "pdflatex"
-  "Sep1.out" 1662660144 2068 fa4295cab7d5d9c11589927d3844636f "pdflatex"
-  "Sep1.tex" 1662660140 8507 63e4c10c059e58ff7cd17157a18cb9d5 ""
-  "Sep1.toc" 1662660144 1240 e657f5370d13e7354d5c450c9e1d3ba2 "pdflatex"
+  "Sep1.aux" 1663005141 3181 595e6f8393e207a0fef246a8826dabb8 "pdflatex"
+  "Sep1.out" 1663005141 2784 0e31f1fa80c5fc00d61a225b31dc024e "pdflatex"
+  "Sep1.tex" 1663005135 11510 2b06d4a9dfc56d1599a11bae99ba0331 ""
+  "Sep1.toc" 1663005141 1675 145729c0c6b21357278d098ea2a1445e "pdflatex"
   (generated)
   "Sep1.aux"
   "Sep1.log"

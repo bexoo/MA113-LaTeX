@@ -2,6 +2,7 @@
 
 % Include math
 \usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumitem}
 % Include links
 \usepackage{hyperref}
 
@@ -13,6 +14,9 @@
 % e.g. Thm 1, Lemma 2, Thm 3, Thm 4, \dots
 \theoremstyle{definition}
 \newtheorem*{definition}{Definition} % the star prevents numbering
+
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
 
 % Remarks
 \theoremstyle{remark}
@@ -32,20 +36,26 @@
 \lhead{MA113 Notes} % Left Header
 \rhead{\thepage} % Right Header
 \cfoot{} % Center Foot (empty)
-
-
+\setlist[itemize,1]{label=\textbullet}\setlist[itemize,2]{label=$\circ$}
 
 
 
 
 %%%%%%%%%%%%% SHORTCUTS %%%%%%%%%%%%%%%%%%%%
 \newcommand{\half}{\frac{1}{2}}
+\newcommand{\vecv}{\overrightarrow{v}}
+\newcommand{\vecu}{\overrightarrow{u}}
 \newcommand{\la}{\langle}
 \newcommand{\ra}{\rangle}
 \newcommand{\angled}[1]{\langle {#1} \rangle}
 \newcommand{\cbrt}[1]{\sqrt[3]{#1}}
 \newcommand\norm[1]{\lVert#1\rVert}
 \newcommand\normx[1]{\Vert#1\Vert}
+\newcommand*{\vv}[1]{\overrightarrow{\mkern0mu#1}}
+\newcommand{\normy}[1]{\left\lVert#1\right\rVert}
+
+
+
 
 % Document content begins here
 \begin{document}
@@ -202,11 +212,15 @@ We can subtract these integrals as needed to find areas between two curves:
 \subsection{Norms}
 \begin{itemize}
     \item Norms are the length or magnitude of a vector
+    \begin{itemize}
+        \item Notated as $||\overrightarrow{v}||$.
+    \end{itemize}
     \item $|| \overrightarrow{v} || = \sqrt{v_1^2 + v_2^2 + \dots + r_n^2}$.
     \item $\angled{1,3,2} = \sqrt{14} \angled{\frac{1}{\sqrt{14}},\frac{3}{\sqrt{14}},\frac{2}{\sqrt{14}}}$.
     \begin{itemize}
         \item Generally, this is useful because we separate the norm from the direction (unit vector).
         \item General form is $|| \vec{v} || (\frac{\vec{v}}{||\vec{v}||})$.
+        \item This is called normalizing a vector.
     \end{itemize}
     \item Special Vectors
     \begin{itemize}
@@ -214,9 +228,75 @@ We can subtract these integrals as needed to find areas between two curves:
         \item $\vec{j} = \angled{0,1,0}$
         \item $\vec{k} = \angled{0,0,1}$
         \item Always assume we are in three dimensions (every vector has $0\overrightarrow{k}$).
-
     \end{itemize}
 \end{itemize}
+\subsection{Dot Product}
+The dot product is defined as
+\[ \vv{v} \cdot \vv{w} = v_1w_1 + v_2w_2 + \dots + v_nw_n. \]
+This has a lot of cool properties, for one: \[\vv{v} \cdot \vv{w} = ||\vv{v}||\,||\vv{w}||.\]
+Also, the dot product is commutative and can be distributed.
+\begin{exmp}
+    $\angled{1,3,2} \cdot \angled{3,0,2} = 3+0+2 = 7$.
+\end{exmp}
+
+\subsubsection{Angles in the Dot Product}
+
+Additionally, by the law of cosines on our vector subtraction example, we get:
+\begin{align*}
+||\vv{v}||^2 + ||\vv{u}||^2 - 2||\vv{u}|| ||\vv{v}|| \cos{\theta} & = ||\vv{v}-\vv{u}||^2 \\
+& = (\vv{v}-\vv{u})\cdot(\vv{v}-\vv{u}) \\
+& = \vv{v} \cdot \vv{v} - 2 \vv{u} \cdot \vv{v} + \vv{u} \cdot \vv{u}
+\end{align*}
+Simplifying, we get
+    \[\cos{\theta} = \frac{\vv{u} \cdot \vv{v}}{||\vv{u}|| \, ||\vv{v}||}\]
+This may also be represented as
+\[ ||\vv{u}|| \, ||\vv{v}|| \cos{\theta} = \vv{u} \cdot \vv{v} \]
+So, the dot product gives us:
+\begin{itemize}
+    \item Norms
+    \item Angles
+    \item Distance (metric)
+\end{itemize}
+\subsubsection{Projections}
+We wish to find the component of one vector $\vv{u}$ onto another vector $\vv{v}$.
+This is written as $\text{proj}_{\vv{v}}\vv{u}$, which is the projection of $\vecu$ onto $\vecv$.
+This projection will be a scalar multiple of $\vecv$ (the vector we project onto),
+which can be represented as $\text{proj}_{\vv{v}}\vv{u} = \alpha \vecv$.
+Recall that
+\[\cos{\theta} = \frac{\vv{u} \cdot \vv{v}}{||\vv{u}|| \, ||\vv{v}||}.\]
+In our case $\theta=90^\circ$, so $\vecu \cdot \vecv = 0$.
+Note that $\vecu \perp \vecv \: \iff \: \vecu \cdot \vecv = 0.$
+We know that
+\begin{align*}
+    \alpha \vecv \cdot (\vecu - \alpha \vecv) & = 0 \\
+    \vecu & = \alpha \vecv \cdot \vecv \\
+    \alpha &= \frac{\vecv \cdot \vecu}{\vecv \cdot \vecv}.
+\end{align*}
+Therefore,
+\[ \text{proj}_{\vecv} \vecu = (\frac{\vecv \cdot \vecu}{\vecv \cdot \vecv})\vecv .\]
+A way to remember this is that $\vecv$ is the vector we are projecting onto.
+
+\subsection{Three Dimensions}
+We orient our axes by the right hand rule, where the $x$ axis is coming towards us.
+\subsubsection{Set Notation}
+\begin{itemize}
+    \item A sphere would be $\{\vecu : \norm{\vecu} = k\}$.
+    \begin{itemize}
+        \item $x^2+y^2+z^2=k^2$
+    \end{itemize}
+    \item A sphere centered at another point would be $\{\vecu: \norm{\vecu-\vv{w}} = k\}$,
+where $\vv{w}$ is the vector from the origin to the center of the sphere.
+    \begin{itemize}
+        \item $(x-a)^2+(y-b)^2+(z-c)^2=k^2$
+    \end{itemize}
+
+\end{itemize}
+
+
+
+
+
+
 
 
 
