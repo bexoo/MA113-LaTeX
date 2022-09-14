@@ -351,10 +351,10 @@ To calculate the cross product of $\vecv = \angled{0,1,2}$ and $\vecw = \angled{
 \end{bmatrix})} \]
 We can dot the resulting vector with any of our original vectors and we should get $0$, this verifies that our calculation is correct.
 
-\section{Parametric Equations}
-\subsection{Introduction}
+\subsection{Parametric Equations}
+\subsubsection{Introduction}
 Generally, a parametric function is one that takes a variable $t$ and maps it to a point $(x,y,z)$. They are usually used to model the position of moving objects. It can also be thought of as mapping a straight line onto a flexible line in space.
-\subsection{Some notation things}
+\subsubsection{Some notation things}
 Usually we write functions as $y(x) = x^2$, however a more specific notation would be
 \[ y:\mathbb{R} \rightarrow \mathbb{R}_+ : x \mapsto x^2 \]
 This means we have a function $y$ such that it maps real numbers onto positive real numbers, and it maps a value $x$ onto $x^2$.
@@ -372,7 +372,35 @@ Also,
 \subsection{Lines in 3 Dimensions}
 Defining lines as $y=mx+b$ does not work in three dimensions, since a line in three dimensions does not have a slope.. Instead, we define lines with a point and a direction.
 \[ \vv{r}(t) = \vv{A} + t\vecv \]
-where $\vv{A}$ is the origin point of the line and $\vecv$ is the direction of the line, which we can think of as taking the place of the slope. Usually we combine these two terms into a single vector.
+where $\vv{A}$ is the origin point of the line and $\vecv$ is the direction of the line, which we can think of as taking the place of the slope. Usually we combine these two terms into a single vector, like
+\[ \angled{2-t,1-2t,4-4t} .\]
+Alternatively, we may write this as
+\begin{align*}
+    x(t) & = 2-t \\
+    y(t) & = 1-2t \\
+    z(t) & = 4-4t.
+\end{align*}
+The former is the vector form, and the latter equations are parametric equations.
+
+\subsection{Distance Between Line and Point}
+We wish the find the distance $d$ between a line and a point. The line is defined by a point $A$ and a vector $\vecv$, and the point is $B$. Let $\theta$ be the angle between the vectors $\vecv$ and $\vv{AB}$. We quickly see that
+\[ \sin{\theta} = \frac{d}{\norm{\vv{AB}}} .\]
+Now we may see hints of the cross product in here.
+\begin{align*}
+    d & = \frac{\norm{\vecv}\norm{\vv{AB}}\sin{\theta}}{\norm{\vecv}} \\
+     & = \boxed{\frac{\norm{\vv{AB} \times \vecv}}{\norm{\vecv}}}.
+\end{align*}
+
+\subsection{Planes}
+A plane is defined as, given a point $A$ and a vector $\vecv$ rooted at $A$, the set of all points $P$ such that $\vv{AP} \perp \vecv$, or $\vv{AP} \cdot \vecv = 0$. If we write $A$  and $P$ as vectors, this is equivalent to
+\[ \vecv \cdot (\vv{P} - \vv{A}) = 0 \]
+Usually, this is multiplied out, and the equation of the plane is written in the form
+\[ ax + by + cz = d \]
+In this case, the normal vector turns out to be $\angled{a,b,c}.$
+\subsubsection{Given Three Points}
+When given three points $A,B,C$, we first need to find the normal vector. This can be done by taking $\vv{AB} \times \vv{AC}.$ Then, the rest of the calculation proceeds as shown prior.
+
+
 
 
 

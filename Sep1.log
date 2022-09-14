@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.27)  14 SEP 2022 13:55
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.27)  14 SEP 2022 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -528,17 +528,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12] (./Sep1.aux)
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13] (./Sep1.aux)
 Package rerunfilecheck Info: File `Sep1.out' has not changed.
-(rerunfilecheck)             Checksum: 012A11A486FD583BCAA6A83D39E7F26B;4349.
+(rerunfilecheck)             Checksum: E0887F7D2E7C3F282BC34199C0DE56C1;4863.
  ) 
 Here is how much of TeX's memory you used:
  9845 strings out of 476179
- 154085 string characters out of 5809544
- 481299 words of memory out of 5000000
+ 154091 string characters out of 5809544
+ 481828 words of memory out of 5000000
  30473 multiletter control sequences out of 15000+600000
  477612 words of font info for 74 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,21n,64p,506b,536s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 60i,23n,64p,506b,536s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Sep1.xdv (12 pages, 124224 bytes).
+Output written on Sep1.xdv (13 pages, 138868 bytes).

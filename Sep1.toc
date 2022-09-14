@@ -24,8 +24,11 @@
 \contentsline {subsubsection}{\numberline {2.6.1}2 $\times $ 2}{10}{subsubsection.2.6.1}%
 \contentsline {subsubsection}{\numberline {2.6.2}3 $\times $ 3}{10}{subsubsection.2.6.2}%
 \contentsline {subsubsection}{\numberline {2.6.3}Calculating the Cross Product With Matrices}{11}{subsubsection.2.6.3}%
-\contentsline {section}{\numberline {3}Parametric Equations}{11}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Introduction}{11}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Some notation things}{11}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Crossing Sets}{12}{subsubsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.3}Lines in 3 Dimensions}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {2.7}Parametric Equations}{11}{subsection.2.7}%
+\contentsline {subsubsection}{\numberline {2.7.1}Introduction}{11}{subsubsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.2}Some notation things}{11}{subsubsection.2.7.2}%
+\contentsline {subsubsection}{\numberline {2.7.3}Crossing Sets}{12}{subsubsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.8}Lines in 3 Dimensions}{12}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Distance Between Line and Point}{12}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Planes}{13}{subsection.2.10}%
+\contentsline {subsubsection}{\numberline {2.10.1}Given Three Points}{13}{subsubsection.2.10.1}%
