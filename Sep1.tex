@@ -43,9 +43,9 @@
 
 %%%%%%%%%%%%% SHORTCUTS %%%%%%%%%%%%%%%%%%%%
 \newcommand{\half}{\frac{1}{2}}
-\newcommand{\vecv}{\overrightarrow{v}}
-\newcommand{\vecu}{\overrightarrow{u}}
-\newcommand{\vecw}{\overrightarrow{w}}
+\newcommand{\vecv}{\vv{v}}
+\newcommand{\vecu}{\vv{u}}
+\newcommand{\vecw}{\vv{w}}
 \newcommand{\la}{\langle}
 \newcommand{\ra}{\rangle}
 \newcommand{\angled}[1]{\langle {#1} \rangle}
@@ -362,7 +362,7 @@ In this way, we can write a parametric function as
 \[ \vv{r} : \mathbb{R} \rightarrow \mathbb{R}^3 : t \mapsto  \angled{x(t),y(t),z(t)} \]
 
 \subsubsection{Crossing Sets}
-We take the cross product of sets like this.
+We take the Cartesian product (similar to the cross product) of sets like this.
 \[ \{1,2,3\}\times\{a,b\} = \{(1,a),(1,b),(2,a),(2,b),(3,a),(3,c)\} \]
 In this same way,
 \[ \mathbb{R}^2 = \mathbb{R} \times \mathbb{R} .\]
@@ -372,7 +372,7 @@ Also,
 \subsection{Lines in 3 Dimensions}
 Defining lines as $y=mx+b$ does not work in three dimensions, since a line in three dimensions does not have a slope.. Instead, we define lines with a point and a direction.
 \[ \vv{r}(t) = \vv{A} + t\vecv \]
-where $\vv{A}$ is the origin point of the line and $\vecv$ is the direction of the line, which we can think of as taking the place of the slope. Usually we combine these two terms into a single vector. 
+where $\vv{A}$ is the origin point of the line and $\vecv$ is the direction of the line, which we can think of as taking the place of the slope. Usually we combine these two terms into a single vector.
 
 
 
