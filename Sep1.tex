@@ -45,14 +45,19 @@
 \newcommand{\half}{\frac{1}{2}}
 \newcommand{\vecv}{\overrightarrow{v}}
 \newcommand{\vecu}{\overrightarrow{u}}
+\newcommand{\vecw}{\overrightarrow{w}}
 \newcommand{\la}{\langle}
 \newcommand{\ra}{\rangle}
 \newcommand{\angled}[1]{\langle {#1} \rangle}
 \newcommand{\cbrt}[1]{\sqrt[3]{#1}}
 \newcommand\norm[1]{\lVert#1\rVert}
 \newcommand\normx[1]{\Vert#1\Vert}
+\newcommand\abs[1]{\mid #1 \mid}
 \newcommand*{\vv}[1]{\overrightarrow{\mkern0mu#1}}
 \newcommand{\normy}[1]{\left\lVert#1\right\rVert}
+\newcommand{\im}{\hat{i}}
+\newcommand{\jm}{\hat{j}}
+\newcommand{\km}{\hat{k}}
 
 
 
@@ -63,11 +68,11 @@
 % Set up a title
 \title{MA113 Notes}
 \author{Brady Exoo}
-\date{\today}
+\date{September 1, 2022 - November 17, 2022}
 \maketitle
 
 \begin{abstract}
-Notes for the MA 113 (Mutlivariable Calculus) taught by Dr. Holder.
+Notes for MA113 (Mutlivariable Calculus) taught by Dr. Holder.
 \end{abstract}
 
 % This line makes a ToC
@@ -93,7 +98,7 @@ Notes for the MA 113 (Mutlivariable Calculus) taught by Dr. Holder.
     \item Lacks unique representation
     \begin{itemize}
         \item Can add $2\pi$ to any angle and get the same point
-        \item Can make radius negative and add $\frac{\pi}{2}$ to the angle and get the same point
+        \item Can make radius negative and add $\pi$ to the angle and get the same point
     \end{itemize}
 \end{itemize}
 These coordinates are helpful for setting up integrals later.
@@ -198,11 +203,11 @@ We can subtract these integrals as needed to find areas between two curves:
     \end{itemize}
     \item Adding vectors is the same as adding their components.
     \begin{itemize}
-        \item Geometrically, you add tail of one vector to the head of another.
+        \item Geometrically, we add tail of one vector to the head of another.
         \item Can only add vectors in the same number of dimensions.
         \item $\langle 1,2,0 \rangle + \langle -1,4,8 \rangle = \langle 0,6,3 \rangle$
     \end{itemize}
-    \item In subtraction you add the negative of the vector.
+    \item In subtraction we add the negative of the vector.
     \item Scalar multiplication of a vector is the same as multiplying each component by that scalar.
     \begin{itemize}
         \item $3\angled{1,2,0} = \angled{3,6,0}$
@@ -289,9 +294,85 @@ where $\vv{w}$ is the vector from the origin to the center of the sphere.
     \begin{itemize}
         \item $(x-a)^2+(y-b)^2+(z-c)^2=k^2$
     \end{itemize}
-
 \end{itemize}
 
+\subsection{Cross Product}
+\begin{definition}
+    $\vecv \times \vv{w} = \norm{\vecv} \, \norm{\vv{w}} \sin{\theta} \, \vv{n}$,
+    where $\vv{n}$ is a unit vector which satisfies the right-hand rule.
+\end{definition}
+$n$ must be perpendicular to both vectors $\vecv$ and $\vv{w}$.
+Alternatively,
+\[  \norm{\vecv \times \vv{w}} = \norm{\vecv} \, \norm{\vv{w}} \, |\sin{\theta}| \]
+\subsubsection{Properties}
+\begin{itemize}
+    \item Not commmuative, can be clearly seen by the right-hand rule, which gives opposite values if we reverse the order.
+    \begin{itemize}
+        \item $\vecv \times \vecw = -(\vecw \times \vecv)$
+    \end{itemize}
+    \item The magnitude of the cross product is the area of the parallelogram formed by the two vectors.
+    \item $\vecv \times (\alpha \vecv) = \angled{0,0,0}$
+    \item $\norm{\vecv} \, \norm{\vecw} = \vecv \times \vecw \iff \vecv \perp \vecw.$
+    \begin{itemize}
+        \item This means $\vecv \perp \vecw \iff \vecv \cdot \vecw = 0$.
+    \end{itemize}
+\end{itemize}
+\subsection{Matrices}
+\subsubsection{2 $\times$ 2}
+Given a matrix
+\[
+\begin{bmatrix}
+    A & B \\
+    C & D
+\end{bmatrix}
+\]
+The determinant of the matrix is $AD - BC$. This is the area of the parallelogram formed by the vectors $\angled{A,B}$ and $\angled{C,D}$.
+\subsubsection{3 $\times$ 3}
+Given a matrix
+\[
+\begin{bmatrix}
+    A & B & C \\
+    D & E & F \\
+    G & H & I
+\end{bmatrix}
+\]
+We first take $A$ and multiply it by the determinant of the matrix formed by crossing out its row and column (any place a rook could be placed and not hit $A$).
+\[ A(EI-FH) \]
+Every other term is negative, so we subtract the $B$ term and add the $C$ term, giving us
+\[ A(EI-FH) - B(DI-FG) + C(DH - GE) \footnote{We can calulate this easier by expanding by a row (or column) with 0s, we don't always need to do the top row! The process will be the same, and the $+$s and $-$s form a checkerboard pattern.}\] as the determinant of this matrix. This is the volume of the parallelepiped formed by the vectors $\angled{A,B,C}$, $\angled{D,E,F}$ and $\angled{G,H,I}$. This is also known as the triple product, but it is really just
+\[\angled{A,B,C} \times \angled{D,E,F} \cdot \angled{G,H,I}\]
+\subsubsection{Calculating the Cross Product With Matrices}
+To calculate the cross product of $\vecv = \angled{0,1,2}$ and $\vecw = \angled{1,1,3}$ we use the determinant.
+\[ \vecv \times \vecw = \det\footnote{This is slightly a misuse of notation, usually we should not have a vector in this matrix.}{(
+\begin{bmatrix}
+    \hat{i} & \hat{j} & \hat{k} \\
+    0 & 1 & 2 \\
+    1 & 1 & 3
+\end{bmatrix})} \]
+We can dot the resulting vector with any of our original vectors and we should get $0$, this verifies that our calculation is correct.
+
+\section{Parametric Equations}
+\subsection{Introduction}
+Generally, a parametric function is one that takes a variable $t$ and maps it to a point $(x,y,z)$. They are usually used to model the position of moving objects. It can also be thought of as mapping a straight line onto a flexible line in space.
+\subsection{Some notation things}
+Usually we write functions as $y(x) = x^2$, however a more specific notation would be
+\[ y:\mathbb{R} \rightarrow \mathbb{R}_+ : x \mapsto x^2 \]
+This means we have a function $y$ such that it maps real numbers onto positive real numbers, and it maps a value $x$ onto $x^2$.
+In this way, we can write a parametric function as
+\[ \vv{r} : \mathbb{R} \rightarrow \mathbb{R}^3 : t \mapsto  \angled{x(t),y(t),z(t)} \]
+
+\subsubsection{Crossing Sets}
+We take the cross product of sets like this.
+\[ \{1,2,3\}\times\{a,b\} = \{(1,a),(1,b),(2,a),(2,b),(3,a),(3,c)\} \]
+In this same way,
+\[ \mathbb{R}^2 = \mathbb{R} \times \mathbb{R} .\]
+Also,
+\[ \mathbb{R}^3 = \mathbb{R} \times \mathbb{R} \times \mathbb{R} .\]
+
+\subsection{Lines in 3 Dimensions}
+Defining lines as $y=mx+b$ does not work in three dimensions, since a line in three dimensions does not have a slope.. Instead, we define lines with a point and a direction.
+\[ \vv{r}(t) = \vv{A} + t\vecv \]
+where $\vv{A}$ is the origin point of the line and $\vecv$ is the direction of the line, which we can think of as taking the place of the slope. Usually we combine these two terms into a single vector. 
 
 
 
