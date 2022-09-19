@@ -3,8 +3,11 @@
 % Include math
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{enumitem}
+\usepackage{physics}
 % Include links
 \usepackage{hyperref}
+% Cool epigraph style stuff
+\usepackage{epigraph}
 
 %%%%%%%%%%%%%  THEOREMS  %%%%%%%%%%%%%%%%%
 \theoremstyle{plain} % other options: definition, remark
@@ -30,6 +33,10 @@
 % The following sets them to 1in
 \usepackage[margin=1.5in]{geometry}
 
+\setlength\epigraphwidth{.8\textwidth}
+\setlength\epigraphrule{0pt}
+\renewcommand{\epigraphflush}{center}
+
 % The following sets up some headers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -53,9 +60,9 @@
 \newcommand{\ra}{\rangle}
 \newcommand{\angled}[1]{\left\langle {#1} \right\rangle}
 \newcommand{\cbrt}[1]{\sqrt[3]{#1}}
-\newcommand\norm[1]{\lVert#1\rVert}
+\renewcommand\norm[1]{\lVert#1\rVert}
 \newcommand\normx[1]{\Vert#1\Vert}
-\newcommand\abs[1]{\mid #1 \mid}
+\renewcommand\abs[1]{\mid #1 \mid}
 \newcommand*{\vv}[1]{\overrightarrow{\mkern0mu#1}}
 \newcommand{\normy}[1]{\left\lVert#1\right\rVert}
 \newcommand{\im}{\hat{i}}
@@ -84,7 +91,10 @@ Notes for MA113 (Mutlivariable Calculus) taught by Dr. Holder.
 % This line starts a new page
 \eject
 
+
 \section{Coordinate Systems and Polar Functions}
+\epigraph{\itshape Begin at the beginning, the King said gravely, ``and go on till you come to the end: then stop.''}{Lewis Carroll, \textit{Alice in Wonderland}}
+
 \subsection{Rectangular Coordinates}
 \begin{itemize}
     \item $(x,y)$
@@ -428,11 +438,11 @@ d & = \frac{\norm{\vecn} \, \norm{\vv{AB}} \, |\cos{\theta}|}{\norm{\vecn}} \\
 as desired.
 
 \section{Parametric Equations}
-\subsection{Introduction}
+\subsection{Example}
 Assume we have a function
 \[ \vv{r}(t) = \angled{\cos{t},\sin{t},t}. \]
 The first two coordinates we recognize as the equation for a circle, and the third is simply linear, so the resulting graph is a spiral in the $+z$ direction.
-\subsection{Derivative of Parametric Equations}
+\subsection{Derivatives of Parametric Equations}
 The derivative of $r(t) = \angled{x(t),y(t),z(t)}$ is defined
 \begin{align*}
 \frac{d}{dt} \vv{r}(t) &= \lim_{h \rightarrow 0} \frac{\vv{r}(t+h)-\vv{r}(t)}{h} \\
@@ -440,6 +450,31 @@ The derivative of $r(t) = \angled{x(t),y(t),z(t)}$ is defined
 & = \angled{x^\prime(t),y^\prime(t),z^\prime(t)}
 \end{align*}
 If $\vecr(t)$ is position, then $\vecr^\prime(t)$ is velocity and $\vecr^{\prime\prime}(t)$ is acceleration. The magnitude of velocity is speed.
+
+\subsection{Arclength}
+Let $s(t)$ be the function for the arclength of a parametric function. Simply,
+\[ s(t) = \int_{t_1}^t{\norm{\vecv(\tau)}d\tau}. \]
+Additionally,
+\begin{align*}
+s^\prime(t) & = \frac{d}{dt} \int_{t_1}^t{\norm{\vecv(\tau)}d\tau} \\
+& = \norm{\vecv(t)}.
+\end{align*}
+
+\subsection{Constant Length}
+If $\vecr(\alpha)$ has the property that $\norm{\vecr(/alpha)} = k$, then
+\[ \vecr \cdot \vecr = k^2.\]
+Differentiating, we get
+\[ \vecr^\prime \cdot \vecr + \vecr \cdot \vecr^\prime = 0 \]
+so
+\[ 2 \vecr \cdot \vecr^\prime = 0 \]
+and
+\[ \vecr \perp \vecr^\prime.\]
+
+\subsection{Special Unit Vectors}
+We define the normal tangent vector as \[\vb{T} = \frac{\vecr^\prime}{\norm{\vecr^\prime}}\] and the unit normal vector as \[\vb{N} = \frac{dT/d\alpha}{\norm{dT/d\alpha}}.\]
+The binormal vector is defined as \[\vb{B} = \vb{T} \times \vb{N}. \]
+These vectors are all perpendicular to one another, and they create a coordinate system for us to describe motion along a curve.
+
 
 
 
