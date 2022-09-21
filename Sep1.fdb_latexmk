@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1663354144 "Sep1.xdv" "Sep1.pdf" "Sep1" 1663354145
-  "Sep1.xdv" 1663354144 166284 02c523f78e4e0c3732a7601c2e642f99 "xelatex"
+["xdvipdfmx"] 1663782876 "Sep1.xdv" "Sep1.pdf" "Sep1" 1663782877
+  "Sep1.xdv" 1663782876 187504 1fb5a903cabf259dc5d94f2cfc374a39 "xelatex"
   (generated)
   "Sep1.pdf"
-["xelatex"] 1663354142 "Sep1.tex" "Sep1.xdv" "Sep1" 1663354145
+["xelatex"] 1663782875 "Sep1.tex" "Sep1.xdv" "Sep1" 1663782877
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -86,10 +86,10 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1661659015 5419896 ad30975f24394271b87a080fc49bf1c6 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Sep1.aux" 1663354144 5874 fee507164b34fc76ca7824838af89f89 "xelatex"
-  "Sep1.out" 1663354144 6051 c22d198f231d53cfedc10864e57a70e3 "xelatex"
-  "Sep1.tex" 1663354140 20382 566161bb0397f5c2e1b05f6ff0d61445 ""
-  "Sep1.toc" 1663354144 3540 72712abe829af756ce7b7f806eed324a "xelatex"
+  "Sep1.aux" 1663782876 6367 39c07c695b14539e285877ebd10f0eb0 "xelatex"
+  "Sep1.out" 1663782876 6594 c6c3de8267fedc40c7310475d3a40544 "xelatex"
+  "Sep1.tex" 1663782871 22648 40812129c703357e801d6b68b7ab6a8e ""
+  "Sep1.toc" 1663782876 3869 3d625a6414f06e0b37e097d2c36ac0a7 "xelatex"
   (generated)
   "Sep1.aux"
   "Sep1.log"

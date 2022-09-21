@@ -39,3 +39,7 @@
 \contentsline {subsection}{\numberline {3.3}Arclength}{14}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Constant Length}{14}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Special Unit Vectors}{15}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Curvature}{15}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Decomposing Acceleration}{16}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Integration}{16}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Projectile Motion}{16}{subsection.3.9}%

@@ -35,6 +35,7 @@
 
 \setlength\epigraphwidth{.8\textwidth}
 \setlength\epigraphrule{0pt}
+\setlength{\headheight}{15.0pt}
 \renewcommand{\epigraphflush}{center}
 
 % The following sets up some headers
@@ -60,14 +61,15 @@
 \newcommand{\ra}{\rangle}
 \newcommand{\angled}[1]{\left\langle {#1} \right\rangle}
 \newcommand{\cbrt}[1]{\sqrt[3]{#1}}
-\renewcommand\norm[1]{\lVert#1\rVert}
 \newcommand\normx[1]{\Vert#1\Vert}
 \renewcommand\abs[1]{\mid #1 \mid}
 \newcommand*{\vv}[1]{\overrightarrow{\mkern0mu#1}}
-\newcommand{\normy}[1]{\left\lVert#1\right\rVert}
+\renewcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\im}{\hat{i}}
 \newcommand{\jm}{\hat{j}}
 \newcommand{\km}{\hat{k}}
+\newcommand{\ddt}{\frac{d}{dt}}
+\newcommand{\dydx}{\frac{dy}{dx}}
 
 
 
@@ -91,9 +93,8 @@ Notes for MA113 (Mutlivariable Calculus) taught by Dr. Holder.
 % This line starts a new page
 \eject
 
-
 \section{Coordinate Systems and Polar Functions}
-\epigraph{\itshape Begin at the beginning, the King said gravely, ``and go on till you come to the end: then stop.''}{Lewis Carroll, \textit{Alice in Wonderland}}
+\epigraph{\itshape ``This your last chance. After this there is no turning back. You take the blue pill, the story ends. You wake up in your bed and believe whatever you want to. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes.''}{Morpheus, \textit{The Matrix}}
 
 \subsection{Rectangular Coordinates}
 \begin{itemize}
@@ -115,7 +116,7 @@ Notes for MA113 (Mutlivariable Calculus) taught by Dr. Holder.
         \item Can make radius negative and add $\pi$ to the angle and get the same point
     \end{itemize}
 \end{itemize}
-These coordinates are helpful for setting up integrals later.
+These coordinates will be helpful for setting up integrals later in the course. Often by a change of coordinates we turn a complicated integral into an elegant one!
 
 \subsection{Transformations}
 \definition{$\tan{\theta}$ is the distance from the intersection of the extended radius and the vertical tangent to the tangent point.}
@@ -125,7 +126,6 @@ These coordinates are helpful for setting up integrals later.
     \begin{itemize}
         \item $x=0 \implies \theta \in \{\frac{\pi}{2}, \frac{3\pi}{2}\}$
     \end{itemize}
-    \eject
     \item $\theta = \tan^{-1}{\frac{y}{x}}$
     \begin{itemize}
         \item $\tan{\theta}$ is the distance from the intersection of the extended radius and the vertical tangent to the tangent point
@@ -474,7 +474,43 @@ and
 We define the normal tangent vector as \[\vb{T} = \frac{\vecr^\prime}{\norm{\vecr^\prime}}\] and the unit normal vector as \[\vb{N} = \frac{dT/d\alpha}{\norm{dT/d\alpha}}.\]
 The binormal vector is defined as \[\vb{B} = \vb{T} \times \vb{N}. \]
 These vectors are all perpendicular to one another, and they create a coordinate system for us to describe motion along a curve.
-
+\subsection{Curvature}
+We define curvature as the change in the tangent vector per unit length, or:
+\[ \kappa = \norm{\frac{dT}{ds}}. \]
+This is intuitively simple, but deceptively hard to calculate! Thankfully, we have the chain rule:
+\begin{align*}
+    \kappa & = \norm{\frac{dT/d\alpha}{ds/d\alpha}} \\
+    & = \norm{\frac{dT/d\alpha}{\norm{\vecv(\alpha)}}}
+\end{align*}
+So, to calculate the curvature we have to parameterize both the tangent vector and the speed, making differentiation simple. Some notable examples are:
+\begin{itemize}
+    \item The curvature of a circle is $\frac{1}{r}$.
+\end{itemize}
+\subsection{Decomposing Acceleration}
+We can parameterize acceleration as
+\begin{align*}
+\vv{a} &= a_tT + a_nN \\
+& = (\vv{a} \cdot \vb{T})T + (\vv{a} \cdot N)N \\
+& = \left(\ddt \norm{v}\right)T + (\kappa \norm{v}^2)N \\
+& = (\text{proj}_T\vv{a})T + (\text{proj}_N\vv{a})N
+\end{align*}
+$a_T$ is called the scalar component of acceleration in the tangential direction, and $a_N$ is called the normal component of acceleration in the tangential direction. When $a_N=0$, the acceleration is entirely along the axis of motion. When $a_T=0$, the acceleration is orthogonal to the the direction of motion.
+\subsection{Integration}
+When integrating any parametric or vector function, we take the antiderivative of each component individually.
+\begin{align*}
+    \int{\angled{t,\sin{t},e^{2t}}dt} &= \angled{\frac{1}{2}t^2,-\cos{t},\frac{1}{2}e^{2t} + \vv{c}} \\
+    &= \angled{\frac{1}{2}t^2+c_1,-\cos{t}+c_2,\frac{1}{2}e^{2t}+c_3}
+\end{align*}
+\subsection{Projectile Motion}
+Instead of using kinematic equations, we can solve projectile motion through vectors and integration. As always, we have
+\[ \vv{a} = \angled{0,-9.8} \]
+Then by integrating we get
+\begin{align*}
+    \vv{v} = \int{\vv{a}dt} &= \angled{0,-9.8t}+\vv{v_0} \\
+    & = \angled{v_{0x},-9.8t + v_{0y}}
+\end{align*}
+Integrating again, we get
+\[ \vecr = \angled{v_{0x}t,-4.9t^2 + v_{0y}t} + \vv{r_0} \]
 
 
 
