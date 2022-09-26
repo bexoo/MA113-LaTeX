@@ -495,6 +495,12 @@ We can parameterize acceleration as
 & = (\text{proj}_T\vv{a})T + (\text{proj}_N\vv{a})N
 \end{align*}
 $a_T$ is called the scalar component of acceleration in the tangential direction, and $a_N$ is called the normal component of acceleration in the tangential direction. When $a_N=0$, the acceleration is entirely along the axis of motion. When $a_T=0$, the acceleration is orthogonal to the the direction of motion.
+%\subsubsection{Derivation}
+%We begin with
+%\[ v = \norm{v}\vb{T} \] by the definition of the unit tangent vector.
+%Differentiating with respect to time, we get
+%\[ a = (\ddt \norm{v})\vb{T} + \]
+
 \subsection{Integration}
 When integrating any parametric or vector function, we take the antiderivative of each component individually.
 \begin{align*}
@@ -511,6 +517,30 @@ Then by integrating we get
 \end{align*}
 Integrating again, we get
 \[ \vecr = \angled{v_{0x}t,-4.9t^2 + v_{0y}t} + \vv{r_0} \]
+
+\section{Functions of Several Variables}
+We will now study functions of the type
+\[ y:\mathbb{R}^2 \rightarrow \mathbb{R} \; \text{or} \; y:\mathbb{R}^3 \rightarrow \mathbb{R} .\]
+Take for example the function $f(x,y) = x^2 + y^2$. This function maps every point on the plane to another point on a number line. This function can also be visualized as $z=x^2+y^2$, now it is a graph in $3$ dimensions which forms a bowl.
+\subsection{Level Curves}
+The level curve for $f(x,y)=k$ is the set of all soutions to this equation.
+They can be visualized in $2$ variables as a plane slicing the function at $z=k$.
+\subsection{Limits}
+$\frac{x}{x} \neq 1$ but $\lim\limits_{x\rightarrow0} \frac{x}{x} = \lim\limits_{x\rightarrow0} 1$, remember your notation!
+Limits are different in two dimensions, there is no left hand side or right hand side. This makes showing the limit exists more difficult. Limits in two dimensions are denotated as
+\[ \lim_{(x,y)\to(x_0,y_0)} f(x,y) .\]
+Often we prohibit a certain line in these two dimensions, such as in the case
+\[ \lim_{(x,y)\to(0,0)} \frac{x^2-y^2}{x-y} \]
+we exclude the line $y=x$.
+\subsubsection{Delta Epsilon Definition of The Limit}
+\[
+    \lim_{x\to x_0}f(x) = L \] means that
+\[ \forall \epsilon > 0,  \exists  \delta > 0 \ni ,\]
+\[ 0 < \abs{x-x_0} < \delta \implies \abs{f(x)-L} < \epsilon \]
+In English, this says that for all $\epsilon > 0$, we can choose a delta such that if the left bottom statement is true the right bottom statement is also true.
+
+
+
 
 
 
