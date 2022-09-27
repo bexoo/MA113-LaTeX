@@ -12,6 +12,8 @@
 %%%%%%%%%%%%%  THEOREMS  %%%%%%%%%%%%%%%%%
 \theoremstyle{plain} % other options: definition, remark
 \newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+
 \newtheorem{lemma}[theorem]{Lemma}
 % By including [theorem], the lemma follows the numbering of theorem
 % e.g. Thm 1, Lemma 2, Thm 3, Thm 4, \dots
@@ -69,7 +71,12 @@
 \newcommand{\jm}{\hat{j}}
 \newcommand{\km}{\hat{k}}
 \newcommand{\ddt}{\frac{d}{dt}}
+\newcommand{\ddx}{\frac{d}{dx}}
 \newcommand{\dydx}{\frac{dy}{dx}}
+\newcommand{\pypx}{\frac{\partial y}{\partial x}}
+\newcommand{\ppx}{\frac{\partial}{\partial x}}
+
+
 
 
 
@@ -535,9 +542,52 @@ we exclude the line $y=x$.
 \subsubsection{Delta Epsilon Definition of The Limit}
 \[
     \lim_{x\to x_0}f(x) = L \] means that
-\[ \forall \epsilon > 0,  \exists  \delta > 0 \ni ,\]
+\[ \forall \epsilon > 0,  \ \exists  \delta > 0 \ni ,\]
 \[ 0 < \abs{x-x_0} < \delta \implies \abs{f(x)-L} < \epsilon \]
 In English, this says that for all $\epsilon > 0$, we can choose a delta such that if the left bottom statement is true the right bottom statement is also true.
+
+\subsection{Partial Derivatives}
+Assume we have a function $f(x,y)$ and we wish to find its derivative. Derivative usually tell us the ratio of the rate of change of $f$ to the rate of change of $x$, our input variable. However, in this case we have multiple input variables. To take the derivative of just one variable we have partial dervatives, which are defined in our case as
+\[ \frac{\partial f}{\partial x} = \lim_{h\to 0} \frac{f(x+h,y) - f(x,y)}{h} \]
+\[ \frac{\partial f}{\partial y} = \lim_{h\to 0} \frac{f(x,y+h) - f(x,y)}{h} \]
+Second partial derivatives are written as
+\[ \frac{\partial^2 f}{\partial y \, \partial x} = \frac{\partial}{\partial y}\left(\frac{\partial}{\partial x}(f)\right) \]
+\[ \frac{\partial^2 f}{\partial x^2} = \frac{\partial}{\partial x}\left(\frac{\partial}{\partial x}(f)\right) \]
+
+Also, \[\frac{\partial^2 f}{\partial y \, \partial x} = \frac{\partial^2 f}{\partial x \, \partial y}\]
+
+
+\subsubsection{Linearity}
+A function $f$ is linear if the following are true:
+\begin{itemize}
+    \item $f(kx) = kf(x)$
+    \item $f(x+y) = f(x) + f(y).$
+\end{itemize}
+Therefore not all lines are linear!
+The derivative operator is linear because
+\[ \ddx (f(x)+g(x)) = \frac{df}{dx} (x) + \frac{dg}{dx} (x) \]
+\[ \ddx kf(x) = k \frac{df}{dx}(x) .\]
+
+\subsubsection{Notation}
+\begin{itemize}
+    \item $\frac{\partial f}{\partial x} = f_x$
+    \item $\frac{\partial f}{\partial y} = f_y$
+    \item $\frac{\partial^2 f}{\partial y \partial x} = f_{xy}$
+    \item $\frac{\partial^4 f}{\partial z \partial w^2 \partial x} = f_{xwwz}$
+\end{itemize}
+
+\subsection{Chain Rule}
+We have a function $f(x(t),y(t)) = z.$ Note that $f$ can be written as either a function of just $t$ or also a function of $x(t)$ and $y(t)$.
+Then the Chain Rule states that
+\begin{align*}
+\frac{df}{dt} & = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}  \\
+&= \angled{\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}} \cdot \angled{\frac{dx}{dt},\frac{dy}{dt}} \\
+& = \ddt f\left(\vecr(t)\right)
+\end{align*}
+$\angled{\frac{\partial f}{\partial x}} = \nabla f(x,y)$, or the gradient.
+
+
+
 
 
 
