@@ -611,6 +611,15 @@ If we let $f(\vecr(t))=k$ where $\vecr(t)$ describes all point on the level curv
 \[ \nabla f(\vecr(t)) \cdot \vecr^\prime(t) = 0 \]
 by the chain rule. This means that these two vectors are orthogonal. Therefore, \textbf{the gradient at a point is always perpendicular to the tangent line of the level curve at that point.}
 
+\subsection{Directional Derivatives}
+We wish to find the rate of change of some function $f(x,y)$ in a particular direction $\vv{d} = \angled{d_1,d_2}.$ Using the limit definition of the derivative, this turns out to be
+\begin{align*} \lim_{h\to 0} \frac{f(x+hd_1,y+hd_2)-f(x,y)}{h} & =
+\frac{d}{dh} f\left(\angled{x,y} + h\vv{d}\right) \Bigr\rvert_{h = 0} \\
+& = \nabla f\left(\angled{x,y} + h \vv{d}\right) \cdot \vv{d} \Bigr\rvert_{h = 0} \\
+&= \nabla f(x,y) \cdot \vv{d}
+\end{align*}
+This is called the directional derivative. This also means that the gradient is the direction of steepest increase, since the above function is maximized when $\vv{d}$ is in the same direction as the gradient.
+
 
 
 
