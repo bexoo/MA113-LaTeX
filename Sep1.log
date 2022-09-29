@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.27)  27 SEP 2022 14:48
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.27)  28 SEP 2022 14:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -426,10 +426,10 @@ Overfull \hbox (5.99986pt too wide) in paragraph at lines 191--194
 h the Pythagorean
  []
 
-[5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
+[5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20]
 (./Sep1.aux)
 Package rerunfilecheck Info: File `Sep1.out' has not changed.
-(rerunfilecheck)             Checksum: 55132AAF77B81E2819A21EB30798FBCD;7762.
+(rerunfilecheck)             Checksum: 013EF663094898EDC47BC6800F88B799;7762.
  ) 
 Here is how much of TeX's memory you used:
  10622 strings out of 476179
@@ -440,4 +440,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  73i,24n,77p,506b,536s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Sep1.xdv (19 pages, 218264 bytes).
+Output written on Sep1.xdv (20 pages, 223876 bytes).

@@ -529,9 +529,6 @@ Integrating again, we get
 We will now study functions of the type
 \[ y:\mathbb{R}^2 \rightarrow \mathbb{R} \; \text{or} \; y:\mathbb{R}^3 \rightarrow \mathbb{R} .\]
 Take for example the function $f(x,y) = x^2 + y^2$. This function maps every point on the plane to another point on a number line. This function can also be visualized as $z=x^2+y^2$, now it is a graph in $3$ dimensions which forms a bowl.
-\subsection{Level Curves}
-The level curve for $f(x,y)=k$ is the set of all soutions to this equation.
-They can be visualized in $2$ variables as a plane slicing the function at $z=k$.
 \subsection{Limits}
 $\frac{x}{x} \neq 1$ but $\lim\limits_{x\rightarrow0} \frac{x}{x} = \lim\limits_{x\rightarrow0} 1$, remember your notation!
 Limits are different in two dimensions, there is no left hand side or right hand side. This makes showing the limit exists more difficult. Limits in two dimensions are denotated as
@@ -577,14 +574,44 @@ The derivative operator is linear because
 \end{itemize}
 
 \subsection{Chain Rule}
-We have a function $f(x(t),y(t)) = z.$ Note that $f$ can be written as either a function of just $t$ or also a function of $x(t)$ and $y(t)$.
+Assume we have a function $f(x(t),y(t)) = z.$ Note that $f$ can be written as either a function of just $t$ or also a function of $x(t)$ and $y(t)$.
 Then the Chain Rule states that
 \begin{align*}
 \frac{df}{dt} & = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}  \\
 &= \angled{\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}} \cdot \angled{\frac{dx}{dt},\frac{dy}{dt}} \\
 & = \ddt f\left(\vecr(t)\right)
 \end{align*}
-$\angled{\frac{\partial f}{\partial x}} = \nabla f(x,y)$, or the gradient.
+$\angled{\frac{\partial f}{\partial x}, \frac{\partial f}{\partial x}} = \nabla f(x,y)$, or the gradient (more about this later), so the second line becomes
+\[ \frac{df}{dt} = \nabla f(x,y) \cdot r^\prime. \]
+If we have $f(x(u,w),y(u,w),z(u,w)$, to take the derivative we do
+\begin{align*}
+    \frac{\partial f}{\partial u} & =
+    \frac{\partial f}{\partial x} \frac{\partial x}{\partial u} +
+    \frac{\partial f}{\partial y} \frac{\partial y}{\partial u} +
+    \frac{\partial f}{\partial z} \frac{\partial z}{\partial u} \\
+    & = \angled{
+    \frac{\partial f}{\partial x},
+    \frac{\partial f}{\partial y},
+    \frac{\partial f}{\partial z}} \cdot
+    \angled{
+    \frac{\partial x}{\partial u},
+    \frac{\partial y}{\partial u},
+    \frac{\partial z}{\partial u}} \\
+    & = \nabla f(x,y,z) \cdot
+    \angled{
+    \frac{\partial x}{\partial u},
+    \frac{\partial y}{\partial u},
+    \frac{\partial z}{\partial u}}
+\end{align*}
+
+\subsection{Level Curves}
+The level curve for $f(x,y)=k$ is the set of all soutions to this equation.
+They can be visualized in $2$ variables as a plane slicing the function at $z=k$.
+If we let $f(\vecr(t))=k$ where $\vecr(t)$ describes all point on the level curve, then differentiating gives us
+\[ \nabla f(\vecr(t)) \cdot \vecr^\prime(t) = 0 \]
+by the chain rule. This means that these two vectors are orthogonal. Therefore, \textbf{the gradient at a point is always perpendicular to the tangent line of the level curve at that point.}
+
+
 
 
 
