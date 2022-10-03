@@ -54,3 +54,6 @@
 \contentsline {subsection}{\numberline {4.5}Directional Derivatives}{20}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}Matrices}{20}{subsection.4.6}%
 \contentsline {subsection}{\numberline {4.7}Hessian}{20}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Taylor Expansions}{21}{subsection.4.8}%
+\contentsline {subsubsection}{\numberline {4.8.1}Example}{21}{subsubsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.2}Taylor In 2 Variables}{21}{subsubsection.4.8.2}%

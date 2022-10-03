@@ -645,6 +645,27 @@ The Hessian of a function is denoted as $\nabla^2 f.$ or $H_f$ The Hessian of a 
 \end{bmatrix}. \]
 Recall that the gradient is \[\angled{\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}}.\] We obtain the Hessian by taking the partial derivatives of $x$ and $y$ of each component of the gradient. The Hessian gives us all the second order information about a function.
 
+\subsection{Taylor Expansions}
+Recall from Calculus II that the Taylor expansion is
+\[ f(x) \approx \overbrace{\underbrace{f(x_0) + f^\prime(x_0)(x-x_0)}_{\text{First order Taylor polynomial}} + \frac{1}{2} f^{\prime \prime}(x_0)(x-x_0) + \cdots}^{\text{Function of x,}\  y=T(x)}\]
+This says that we can perfectly approximate any function given perfect information about a single point and all the derivatives at that point.
+\subsubsection{Example}
+We can use the Taylor expansion to gain intuition on some elementary derivatives:
+\begin{align*}
+    \ddx e^x &= \ddx \left( 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \dots \right) \\
+    &= 0 + 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \dots \\
+    &= e^x
+\end{align*}
+\subsubsection{Taylor In 2 Variables}
+In $2$ dimensions, we have
+\[ f(x,y) = f(x_0,y_0) + \nabla f(x_0,y_0) \cdot \angled{x-x_0,y-y_0} + \half \underbrace{\angled{x-x_0,y-y_0}}_{1 \times 2 \text{ matrix}} \nabla^2 f(x_0,y_0) \begin{bmatrix} x-x_0 \\ y-y_0 \end{bmatrix} + \cdots. \]
+This is as far as we will go. Note that the matrix multiplication of the last term all cancels out and we are left with a scalar term.
+
+
+
+
+
+
 
 
 
