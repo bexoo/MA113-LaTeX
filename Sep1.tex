@@ -375,12 +375,12 @@ Every other term is negative, so we subtract the $B$ term and add the $C$ term, 
 
 \subsubsection{Calculating the Cross Product With Matrices}
 To calculate the cross product of $\vecv = \angled{0,1,2}$ and $\vecw = \angled{1,1,3}$ we use the determinant.
-\[ \vecv \times \vecw = \det\footnote{This is slightly a misuse of notation, usually we should not have a vector in this matrix.}{(
+\[ \vecv \times \vecw = \det\footnote{This is slightly a misuse of notation, usually we should not have a vector in this matrix.}{\left(
 \begin{bmatrix}
     \hat{i} & \hat{j} & \hat{k} \\
     0 & 1 & 2 \\
     1 & 1 & 3
-\end{bmatrix})} \]
+\end{bmatrix}\right)} \]
 We can dot the resulting vector with any of our original vectors and we should get $0$, this verifies that our calculation is correct.
 
 \subsection{Parametric Equations}
@@ -618,7 +618,34 @@ We wish to find the rate of change of some function $f(x,y)$ in a particular dir
 & = \nabla f\left(\angled{x,y} + h \vv{d}\right) \cdot \vv{d} \Bigr\rvert_{h = 0} \\
 &= \nabla f(x,y) \cdot \vv{d}
 \end{align*}
-This is called the directional derivative. This also means that the gradient is the direction of steepest increase, since the above function is maximized when $\vv{d}$ is in the same direction as the gradient.
+This is called the directional derivative. This also means that the gradient is the direction of steepest increase, since the above function is maximized when $\vv{d}$ is in the same direction as the gradient. As the function changes faster, the gradient increases.
+
+\subsection{Matrices}
+When multiplying matrices, we multiply rows by columns. For example:
+\[ \begin{bmatrix}
+        2 & -1 \\
+        4 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        3 \\ 5
+    \end{bmatrix} =
+    \begin{bmatrix}
+        2\cdot3 + -1 \cdot 5 \\ 4 \cdot 3 + 1 \cdot 5
+    \end{bmatrix} =
+    \begin{bmatrix}
+        1 \\ 17
+    \end{bmatrix}
+\]
+To multiply two matrices, the first must have the same number of columns as the second matrix has rows.
+\subsection{Hessian}
+The Hessian of a function is denoted as $\nabla^2 f.$ or $H_f$ The Hessian of a function is
+\[ \begin{bmatrix}
+    \frac{\partial^2 f}{\partial x^2} & \frac{\partial^2 f}{\partial x \partial y} \\
+    \frac{\partial^2 f}{\partial y \partial x} & \frac{\partial^2 f}{\partial y^2}
+\end{bmatrix}. \]
+Recall that the gradient is \[\angled{\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}}.\] We obtain the Hessian by taking the partial derivatives of $x$ and $y$ of each component of the gradient. The Hessian gives us all the second order information about a function.
+
+
 
 
 

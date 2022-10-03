@@ -52,3 +52,5 @@
 \contentsline {subsection}{\numberline {4.3}Chain Rule}{19}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Level Curves}{19}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Directional Derivatives}{20}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Matrices}{20}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Hessian}{20}{subsection.4.7}%
