@@ -669,6 +669,23 @@ We can now rewrite this as
     0 &= \angled{f_x,f_y,-1} \cdot \angled{x-x_0,y-y_0,z-z_0}
 \end{align*}
 Note that the vector $\angled{f_x,f_y,-1}$ is the normal vector to the plane, and therefore also the coefficients of the tangent plane in standard form.
+\subsubsection{Level Surfaces}
+The tangent plane to a level surface $f(x,y,z) = k$ is
+\[  \frac{\partial f}{\partial x} (x-x_0) +
+    \frac{\partial f}{\partial y} (y-y_0) +
+    \frac{\partial f}{\partial z} (z-z_0) = 0\]
+or alternatively,
+\[  \angled{\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}} \cdot \left( \angled{x,y,z}-\angled{x_0,y_0,z_0} \right) = 0\]
+\subsection{Optimization}
+There are two cases of optimization:
+\begin{itemize}
+    \item (Easier) Unconstrained
+    \item (Harder) Constrained
+\end{itemize}
+\subsubsection{Unconstrained optimization}
+Given a function $z=f(x,y)$ we see that if we construct a tangent plane at the local maximums and minimums, the normal vectors at those points will be $\angled{0,0,-1}$. Therefore, local max/min $\implies \nabla f(x,y) = \angled{0,0}.$ Critical points are solutions to the equation $\nabla f(x,y) = \angled{0,0}$. These include local minimums, local maximums, and saddle points.
+
+
 
 
 

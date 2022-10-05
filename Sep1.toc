@@ -1,60 +1,63 @@
-\contentsline {section}{\numberline {1}Coordinate Systems and Polar Functions}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Rectangular Coordinates}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Polar Coordinates}{3}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Transformations}{3}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Polar Graphs}{4}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Differentiating Polar Functions}{4}{subsection.1.5}%
-\contentsline {subsubsection}{\numberline {1.5.1}Chain Rule}{5}{subsubsection.1.5.1}%
-\contentsline {subsubsection}{\numberline {1.5.2}Polar Derivatives}{5}{subsubsection.1.5.2}%
-\contentsline {subsection}{\numberline {1.6}Arc Lengths}{5}{subsection.1.6}%
-\contentsline {subsubsection}{\numberline {1.6.1}Review}{5}{subsubsection.1.6.1}%
-\contentsline {subsubsection}{\numberline {1.6.2}Polar Arc Length}{6}{subsubsection.1.6.2}%
-\contentsline {subsection}{\numberline {1.7}Polar Area}{6}{subsection.1.7}%
-\contentsline {section}{\numberline {2}Vectors}{6}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Fundamentals}{6}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Norms}{7}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Dot Product}{8}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Angles in the Dot Product}{8}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Projections}{8}{subsubsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.4}Three Dimensions}{9}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Set Notation}{9}{subsubsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.5}Cross Product}{9}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}Properties}{10}{subsubsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.6}Matrices}{10}{subsection.2.6}%
-\contentsline {subsubsection}{\numberline {2.6.1}2 by 2}{10}{subsubsection.2.6.1}%
-\contentsline {subsubsection}{\numberline {2.6.2}3 by 3}{10}{subsubsection.2.6.2}%
-\contentsline {subsubsection}{\numberline {2.6.3}Calculating the Cross Product With Matrices}{11}{subsubsection.2.6.3}%
-\contentsline {subsection}{\numberline {2.7}Parametric Equations}{11}{subsection.2.7}%
-\contentsline {subsubsection}{\numberline {2.7.1}Some Notation}{11}{subsubsection.2.7.1}%
-\contentsline {subsubsection}{\numberline {2.7.2}Crossing Sets}{11}{subsubsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.8}Lines in 3 Dimensions}{12}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Distance Between Line and Point}{12}{subsection.2.9}%
-\contentsline {subsection}{\numberline {2.10}Planes}{13}{subsection.2.10}%
-\contentsline {subsubsection}{\numberline {2.10.1}Given Three Points}{13}{subsubsection.2.10.1}%
-\contentsline {subsubsection}{\numberline {2.10.2}Finding line Given Two Planes}{13}{subsubsection.2.10.2}%
-\contentsline {subsubsection}{\numberline {2.10.3}Distance From Point To Plane}{13}{subsubsection.2.10.3}%
-\contentsline {section}{\numberline {3}Parametric Equations}{14}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Example}{14}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Derivatives of Parametric Equations}{14}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Arclength}{14}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Constant Length}{14}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Special Unit Vectors}{15}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Curvature}{15}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Decomposing Acceleration}{16}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Integration}{16}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Projectile Motion}{16}{subsection.3.9}%
-\contentsline {section}{\numberline {4}Functions of Several Variables}{17}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Limits}{17}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Delta Epsilon Definition of The Limit}{17}{subsubsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.2}Partial Derivatives}{18}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Linearity}{18}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Notation}{19}{subsubsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.3}Chain Rule}{19}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Level Curves}{19}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Directional Derivatives}{20}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Matrices}{20}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Hessian}{20}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Taylor Expansions}{21}{subsection.4.8}%
-\contentsline {subsubsection}{\numberline {4.8.1}Example}{21}{subsubsection.4.8.1}%
-\contentsline {subsubsection}{\numberline {4.8.2}Taylor In 2 Variables}{21}{subsubsection.4.8.2}%
-\contentsline {subsection}{\numberline {4.9}Tangent Planes}{22}{subsection.4.9}%
+\contentsline {section}{\numberline {1}Coordinate Systems and Polar Functions}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Rectangular Coordinates}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Polar Coordinates}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Transformations}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Polar Graphs}{5}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Differentiating Polar Functions}{5}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Chain Rule}{6}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Polar Derivatives}{6}{subsubsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.6}Arc Lengths}{6}{subsection.1.6}%
+\contentsline {subsubsection}{\numberline {1.6.1}Review}{6}{subsubsection.1.6.1}%
+\contentsline {subsubsection}{\numberline {1.6.2}Polar Arc Length}{7}{subsubsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.7}Polar Area}{7}{subsection.1.7}%
+\contentsline {section}{\numberline {2}Vectors}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Fundamentals}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Norms}{8}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Dot Product}{9}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Angles in the Dot Product}{9}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Projections}{9}{subsubsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4}Three Dimensions}{10}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Set Notation}{10}{subsubsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.5}Cross Product}{10}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Properties}{11}{subsubsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.6}Matrices}{11}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}2 by 2}{11}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}3 by 3}{11}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}Calculating the Cross Product With Matrices}{12}{subsubsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.7}Parametric Equations}{12}{subsection.2.7}%
+\contentsline {subsubsection}{\numberline {2.7.1}Some Notation}{12}{subsubsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.2}Crossing Sets}{12}{subsubsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.8}Lines in 3 Dimensions}{13}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Distance Between Line and Point}{13}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Planes}{14}{subsection.2.10}%
+\contentsline {subsubsection}{\numberline {2.10.1}Given Three Points}{14}{subsubsection.2.10.1}%
+\contentsline {subsubsection}{\numberline {2.10.2}Finding line Given Two Planes}{14}{subsubsection.2.10.2}%
+\contentsline {subsubsection}{\numberline {2.10.3}Distance From Point To Plane}{14}{subsubsection.2.10.3}%
+\contentsline {section}{\numberline {3}Parametric Equations}{15}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Example}{15}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Derivatives of Parametric Equations}{15}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Arclength}{15}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Constant Length}{15}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Special Unit Vectors}{16}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Curvature}{16}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Decomposing Acceleration}{17}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Integration}{17}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Projectile Motion}{17}{subsection.3.9}%
+\contentsline {section}{\numberline {4}Functions of Several Variables}{18}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Limits}{18}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Delta Epsilon Definition of The Limit}{18}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.2}Partial Derivatives}{19}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Linearity}{19}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Notation}{20}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}Chain Rule}{20}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Level Curves}{20}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Directional Derivatives}{21}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Matrices}{21}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Hessian}{21}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Taylor Expansions}{22}{subsection.4.8}%
+\contentsline {subsubsection}{\numberline {4.8.1}Example}{22}{subsubsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.2}Taylor In 2 Variables}{22}{subsubsection.4.8.2}%
+\contentsline {subsection}{\numberline {4.9}Tangent Planes}{23}{subsection.4.9}%
+\contentsline {subsubsection}{\numberline {4.9.1}Level Surfaces}{23}{subsubsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.10}Optimization}{23}{subsection.4.10}%
+\contentsline {subsubsection}{\numberline {4.10.1}Unconstrained optimization}{23}{subsubsection.4.10.1}%
