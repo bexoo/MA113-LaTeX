@@ -676,14 +676,34 @@ The tangent plane to a level surface $f(x,y,z) = k$ is
     \frac{\partial f}{\partial z} (z-z_0) = 0\]
 or alternatively,
 \[  \angled{\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}} \cdot \left( \angled{x,y,z}-\angled{x_0,y_0,z_0} \right) = 0\]
-\subsection{Optimization}
+\section{Optimization}
 There are two cases of optimization:
 \begin{itemize}
     \item (Easier) Unconstrained
     \item (Harder) Constrained
 \end{itemize}
-\subsubsection{Unconstrained optimization}
-Given a function $z=f(x,y)$ we see that if we construct a tangent plane at the local maximums and minimums, the normal vectors at those points will be $\angled{0,0,-1}$. Therefore, local max/min $\implies \nabla f(x,y) = \angled{0,0}.$ Critical points are solutions to the equation $\nabla f(x,y) = \angled{0,0}$. These can either be local minimums, local maximums, and saddle points.
+\subsection{Unconstrained optimization}
+Given a function $z=f(x,y)$ we see that if we construct a tangent plane at the local maximums and minimums, the normal vectors at those points will be $\angled{0,0,-1}$. Therefore, local max/min $\implies \nabla f(x,y) = \angled{0,0}.$ Critical points are solutions to the equation $\nabla f(x,y) = \angled{0,0}$. These can either be local minimums, local maximums, or saddle points.
+\subsubsection{Classification}
+We can classify critical points based on the Hessian $(\nabla^2 f)$ at that point. Assume the Hessian is diagonalizable into
+\[ \begin{bmatrix}
+    \lambda_1 & 0 \\
+    0 & \lambda_2 \\
+\end{bmatrix} \]
+$\lambda_1$ and $\lambda_2$ are called eigenvalues. Then,
+\begin{itemize}
+    \item Both positive $\implies$ local minimum
+    \item Both negative $\implies$ local maximum
+    \item Split signs $\implies$ saddle point
+    \item $\lambda_1 \cdot \lambda_2 = 0 \implies$ indeterminate
+\end{itemize}
+Alternatively, we can classify them by the determinant of the Hessian (note that this will give mostly the same results as using the eigenvalues because the determinant of the diagonalized Hessian is the product of the eigenvalues.)
+\begin{itemize}
+    \item det$\left( \nabla^2 f(x^*,y^*)\right)<0 \implies$ saddle point.
+    \item det$\left( \nabla^2 f(x^*,y^*)\right)>0$ and $\frac{\partial^2 f}{\partial x^2}>0 \implies$ local minimum.
+    \item det$\left( \nabla^2 f(x^*,y^*)\right)>0$ and $\frac{\partial^2 f}{\partial x^2}<0 \implies$ local maximum.
+    \item det$\left( \nabla^2 f(x^*,y^*)\right)=0 \implies$ inconclusive.
+\end{itemize}
 
 
 
