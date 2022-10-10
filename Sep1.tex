@@ -503,11 +503,13 @@ We can parameterize acceleration as
 & = (\text{proj}_T\vv{a})T + (\text{proj}_N\vv{a})N
 \end{align*}
 $a_T$ is called the scalar component of acceleration in the tangential direction, and $a_N$ is called the normal component of acceleration in the tangential direction. When $a_N=0$, the acceleration is entirely along the axis of motion. When $a_T=0$, the acceleration is orthogonal to the the direction of motion.
-%\subsubsection{Derivation}
-%We begin with
-%\[ v = \norm{v}\vb{T} \] by the definition of the unit tangent vector.
-%Differentiating with respect to time, we get
-%\[ a = (\ddt \norm{v})\vb{T} + \]
+\subsubsection{Derivation}
+We begin with
+\[ v = \norm{v}\vb{T} \] by the definition of the unit tangent vector.
+Differentiating with respect to time, we get
+\[ a = \left(\ddt \norm{v}\right)\vb{T} + \frac{d \vb{T}}{dt} \norm{v} \]
+We also know that $\kappa = \frac{dT/dt}{\norm{v(t)}}$ or $\frac{dT}{dt} = \kappa \norm{v(t)}$, so we get
+\[ a = \left(\ddt \norm{v}\right)\vb{T} + (\kappa \norm{v}^2)\vb{N}. \]
 
 \subsection{Integration}
 When integrating any parametric or vector function, we take the antiderivative of each component individually.
