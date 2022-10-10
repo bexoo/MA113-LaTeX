@@ -62,3 +62,5 @@
 \contentsline {section}{\numberline {5}Optimization}{23}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Unconstrained optimization}{23}{subsection.5.1}%
 \contentsline {subsubsection}{\numberline {5.1.1}Classification}{24}{subsubsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.2}Constrained Optimization}{24}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Example Problem}{25}{subsubsection.5.2.1}%

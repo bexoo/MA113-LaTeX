@@ -12,8 +12,9 @@
 %%%%%%%%%%%%%  THEOREMS  %%%%%%%%%%%%%%%%%
 \theoremstyle{plain} % other options: definition, remark
 \newtheorem{theorem}{Theorem}
-\newtheorem*{theorem*}{Theorem}
 
+\theoremstyle{definition}
+\newtheorem*{claim}{Claim}
 \newtheorem{lemma}[theorem]{Lemma}
 % By including [theorem], the lemma follows the numbering of theorem
 % e.g. Thm 1, Lemma 2, Thm 3, Thm 4, \dots
@@ -58,7 +59,7 @@
 \newcommand{\vecw}{\vv{w}}
 \newcommand{\vecn}{\vv{n}}
 \newcommand{\vecr}{\vv{r}}
-
+\newcommand{\Lagr}{\mathcal{L}}
 \newcommand{\la}{\langle}
 \newcommand{\ra}{\rangle}
 \newcommand{\angled}[1]{\left\langle {#1} \right\rangle}
@@ -704,10 +705,45 @@ Alternatively, we can classify them by the determinant of the Hessian (note that
     \item det$\left( \nabla^2 f(x^*,y^*)\right)>0$ and $\frac{\partial^2 f}{\partial x^2}<0 \implies$ local maximum.
     \item det$\left( \nabla^2 f(x^*,y^*)\right)=0 \implies$ inconclusive.
 \end{itemize}
+\subsection{Constrained Optimization}
+Imagine we have some function $f(x)$ to minimize,
+where $x = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}.$ Additionally, imagine there are a set of constraints on $x$, such as $h(x) = 0$ and $g(x) \leq 0$. Using all this information together, we can put our problem in canonical form, which is:
+\begin{align*}
+    \min \  &f(x) \text{ such that} \\
+    &h(x) = 0 \\
+    &g(x) \geq 0
+\end{align*}
+To do this, we construct the Langrangian, which is
+\[ \Lagr \left(x,\lambda,\rho \right) = f(x) - \lambda h(x) -\rho g(x). \]
+\begin{claim}
+    $\min\limits_x\left(\max\limits_{\lambda,\rho\geq0}  f(x) - \lambda h(x) -\rho g(x)\right) = \min f(x)$ such that $h(x) = 0 $ and $g(x) \geq 0$.
+\end{claim}
+\begin{proof}
+We first try to break the constraints. If we choose $x$ such that $h(x) \neq 0$, then $\lambda$ will be chosen so that the maximum of the function goes to $\infty$, so this is not our minimum. If we choose $x$ such that $g(x) < 0$, then $\rho \to \infty$ and $\Lagr \to \infty$. We now know the conditions must be met, so $\left(\max\limits_{\lambda,\rho\geq0}  f(x) - \lambda h(x) -\rho g(x)\right) = f(x)$ because $h(x) = 0$ and $\rho = 0$. Therefore, the left hand side in our claim simply becomes $\min\limits_x f(x)$ under the conditions as desired.
+\end{proof}
+We can also imagine this as Player $1$ wants to minimize $\Lagr$ and chooses an $x$ first, and then Player $2$ wants to maximize $\Lagr$ and chooses $\lambda$ and $\rho \geq 0$.
 
+Solving for the minimum gives us the following list of conditions:
+\begin{itemize}
+    \item $\nabla_x \Lagr(x,\lambda,\rho) = 0$
+    \item $h(x) = 0$, $g(x) \geq 0$ % Not sure if this is right? it might be lambda = 0
+    \item $\rho g(x) = 0, \rho \geq 0$.
+\end{itemize}
+\subsubsection{Example Problem}
+Find the point on the plane $3x+5y+7z=19$ closest to the point $\left( 0,2,-4 \right)$.
 
+First, we model the the problem. We want $\min \norm{\angled{x,y,z}-\angled{0,2,-4}}^2$, such that $3x+5y+7z=19$.
 
+Next, we construct the Lagrangian.
+$\Lagr(x,y,z,\lambda) = \norm{\angled{x,y-2,z+4}}^2 - \lambda (3x+5y+7z-19)$.
 
+Our necessary conditions are:
+\begin{itemize}
+    \item $\nabla_{x,y,z} \Lagr(x,y,z,\lambda) = \angled{0,0,0}$
+    \item $3x+5y+7z-19=0$
+\end{itemize}
+This now becomes a system of equations, and can be trivially solved.
+% More on Lagrange multipliers later!
 
 
 
