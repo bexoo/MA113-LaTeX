@@ -256,10 +256,10 @@ We can subtract these integrals as needed to find areas between two curves:
     \end{itemize}
     \item Special Vectors
     \begin{itemize}
-        \item $\vec{i} = \angled{1,0,0}$
-        \item $\vec{j} = \angled{0,1,0}$
-        \item $\vec{k} = \angled{0,0,1}$
-        \item Always assume we are in three dimensions (every vector has $0\overrightarrow{k}$).
+        \item $\hat{i} = \angled{1,0,0}$
+        \item $\hat{j} = \angled{0,1,0}$
+        \item $\hat{k} = \angled{0,0,1}$
+        \item Always assume we are in three dimensions (every vector has $0\hat{k}$).
     \end{itemize}
 \end{itemize}
 
@@ -696,8 +696,17 @@ We can classify critical points based on the Hessian $(\nabla^2 f)$ at that poin
 $\lambda_1$ and $\lambda_2$ are called eigenvalues. Then,
 \begin{itemize}
     \item Both positive $\implies$ local minimum
+    \begin{itemize}
+        \item Bending upwards in both directions
+    \end{itemize}
     \item Both negative $\implies$ local maximum
+    \begin{itemize}
+        \item Bending downwards in both directions
+    \end{itemize}
     \item Split signs $\implies$ saddle point
+    \begin{itemize}
+        \item Upwards in one direction, positive in the other direction.
+    \end{itemize}
     \item $\lambda_1 \cdot \lambda_2 = 0 \implies$ indeterminate
 \end{itemize}
 Alternatively, we can classify them by the determinant of the Hessian (note that this will give mostly the same results as using the eigenvalues because the determinant of the diagonalized Hessian is the product of the eigenvalues.)
@@ -745,8 +754,24 @@ Our necessary conditions are:
     \item $3x+5y+7z-19=0$
 \end{itemize}
 This now becomes a system of equations, and can be trivially solved.
-% More on Lagrange multipliers later!
 
+\subsection{Lagrange Multipliers}
+Assume we have some limitation $h(x,y)=0.$ We wish to minimize $f(x,y)$ such that $h(x,y)=0$. This creates the Lagrangian $\Lagr(x,y,\lambda) = f(x,y)-\lambda h(x,y)$. Then
+\[ \nabla \Lagr(x,y,\lambda) = \angled{\frac{\partial f}{\partial x} - \lambda \frac{\partial h}{\partial x}, \frac{\partial f}{\partial y} - \lambda \frac{\partial h}{\partial y}, -h} = \angled{0,0,0}.\]
+Then we get the system of equations
+\begin{align*}
+    \frac{\partial f}{\partial x} - \lambda \frac{\partial h}{\partial x} &= 0 \\
+    \frac{\partial f}{\partial y} - \lambda \frac{\partial h}{\partial y} &= 0 \\
+    -h &= 0.
+\end{align*}
+Therefore,
+\[ \nabla f = \lambda \nabla h. \]
+This means that the gradient of $f(x,y)$ is parallel to the gradient of $h(x,y)$ at the minimum.
+
+\section{Iterated Integrals}
+We wish to find the volume under some surface $f(x,y)$ from $x \in \left[a,b\right]$ to $y \in \left[c,d\right]$. Let this rectangular area be $R$. This volume can be expressed as
+\[ \int \int_R f(x,y) \, dA = \int_a^b \int_c^d f(x,y) \, dy dx = \int_c^d \int_a^b f(x,y) \, dx dy\]
+We can switch the order of integration from Fubini's Theorem.
 
 
 
