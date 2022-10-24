@@ -769,9 +769,23 @@ Therefore,
 This means that the gradient of $f(x,y)$ is parallel to the gradient of $h(x,y)$ at the minimum.
 
 \section{Iterated Integrals}
-We wish to find the volume under some surface $f(x,y)$ from $x \in \left[a,b\right]$ to $y \in \left[c,d\right]$. Let this rectangular area be $R$. This volume can be expressed as
-\[ \int \int_R f(x,y) \, dA = \int_a^b \int_c^d f(x,y) \, dy dx = \int_c^d \int_a^b f(x,y) \, dx dy\]
-We can switch the order of integration from Fubini's Theorem.
+We wish to find the volume under some surface $f(x,y)$ from $x \in \left[a,b\right]$ to $y \in \left[c,d\right]$. Let this rectangular area be $R$. This volume can then be expressed as
+\[ \int \int_R f(x,y) \, \dd{A} = \int_a^b \int_c^d f(x,y) \, \dd{y} \dd{x} = \int_c^d \int_a^b f(x,y) \, \dd{x} \dd{y}\]
+We can switch the order of integration by Fubini's Theorem.
+
+\subsection{Complex Regions}
+Sometimes we may need to integrate a function $f(x,y)$ over a non-rectangular region, such as a triangle. In this case, we must set our limits carefully. Imagine a triangle bounded by the lines $x=2$, $y=0$, and $y=x$. Then our integral becomes
+\[ \int_0^2 \int_0^x f(x,y) \, \dd{y} \dd{x}.\]
+Reversing the order of integration, we consider the geometry of the region and find that it becomes
+\[ \int_0^2 \int_y^2 f(x,y) \, \dd{x} \dd{y}.\]
+
+\subsection{Calculating Areas}
+To calculate the area of a region $R$, we evaluate the integral
+\[ \int \int_R 1 \dd{A} .\]
+This lets us calculate the average value of a function over a region by evaluating the integral
+    \[ \frac{\int \int_R f(x,y) \dd{A}}{\int \int_R \dd{A}} .\]
+
+
 
 
 
