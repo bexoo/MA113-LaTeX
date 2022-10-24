@@ -1,4 +1,5 @@
 \documentclass[12pt]{article}
+% EXAM TUESDAY 6PM
 
 % Include math
 \usepackage{amsmath,amsthm,amssymb}
@@ -784,6 +785,35 @@ To calculate the area of a region $R$, we evaluate the integral
 \[ \int \int_R 1 \dd{A} .\]
 This lets us calculate the average value of a function over a region by evaluating the integral
     \[ \frac{\int \int_R f(x,y) \dd{A}}{\int \int_R \dd{A}} .\]
+\subsection{Splitting Regions}
+If we have non-overlapping regions $R = R_1 \cup R_2 \ni R_1 \cap R_2 = \varnothing$ then
+\[\int\int_R f(x,y) \dd{A} = \int\int_{R_1} f(x,y) \dd{A} + \int\int_{R_2} f(x,y) \dd{A}.\]
+
+\subsection{Polar Regions}
+To start, we wish to use double integrals to find the area in some polar function $r(\theta)$. We know the area is $\int\int_R \dd{A}$, so we need to find this in polar coordinates. We remember that
+\[ \begin{pmatrix}
+    x \\ y
+\end{pmatrix} \mapsto \begin{pmatrix}
+    r\cos{\theta} \\ r\sin{\theta}
+\end{pmatrix}. \]
+Differentiating this gives us the Jacobian matrix $\mathbf{J}$ of $r(\theta)$
+\[ \begin{bmatrix}
+    \cos{\theta} & -r\sin{\theta} \\
+    \sin{\theta} & r\cos{\theta}
+\end{bmatrix}. \]
+Then $\dd{A} = \dd{x}\dd{y} = \text{det}(\mathbf{J})\dd{r}\dd{\theta} = r\dd{r}\dd{\theta}$
+
+\subsubsection{Jacobians}
+The Jacobian is a matrix of all the first-order partial derivatives of a vector function in the form
+\[ \begin{bmatrix}
+    \dfrac{\partial f_1}{\partial x_1} & \cdots & \dfrac{\partial f_1}{\partial x_n}\\
+    \vdots                             & \ddots & \vdots\\
+    \dfrac{\partial f_m}{\partial x_1} & \cdots & \dfrac{\partial f_m}{\partial x_n}
+\end{bmatrix}. \]
+In the case of $r(\theta)$, $f_1(\theta) = r\cos{\theta}$ and $f_2(\theta) = r\sin{\theta}$.
+The Jacobian matrix measures the amount of ``stretching'' for each point in some coordinate space $(x,y)$ to another coordinate space $(u,v)$. This is useful to us because in two dimensions, the determinant of the Jacobian is $\frac{\dd{u}\dd{v}}{\dd{x}\dd{y}}$.
+
+
 
 
 

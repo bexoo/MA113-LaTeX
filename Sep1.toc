@@ -69,3 +69,6 @@
 \contentsline {section}{\numberline {6}Iterated Integrals}{26}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Complex Regions}{26}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Calculating Areas}{27}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Splitting Regions}{27}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Polar Regions}{27}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Jacobians}{27}{subsubsection.6.4.1}%
