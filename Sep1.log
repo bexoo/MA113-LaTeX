@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.27)  24 OCT 2022 15:22
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.27)  25 OCT 2022 14:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -438,15 +438,15 @@ MS/cmsy/m/n/12 r\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; y[]\OT
 
 [22] [23] [24] [25] [26] [27] [28] (./Sep1.aux)
 Package rerunfilecheck Info: File `Sep1.out' has not changed.
-(rerunfilecheck)             Checksum: 4A2D086FAFBC8A855A0D74559E83701A;10675.
+(rerunfilecheck)             Checksum: D14AA9BA162952C09F93C6365AAF6BC3;10816.
  ) 
 Here is how much of TeX's memory you used:
- 10634 strings out of 476179
- 164492 string characters out of 5809544
- 500719 words of memory out of 5000000
- 31237 multiletter control sequences out of 15000+600000
- 480104 words of font info for 85 fonts, out of 8000000 for 9000
+ 10640 strings out of 476179
+ 164551 string characters out of 5809544
+ 500880 words of memory out of 5000000
+ 31240 multiletter control sequences out of 15000+600000
+ 481031 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,24n,77p,584b,536s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,24n,77p,584b,538s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Sep1.xdv (28 pages, 320992 bytes).
+Output written on Sep1.xdv (28 pages, 330800 bytes).

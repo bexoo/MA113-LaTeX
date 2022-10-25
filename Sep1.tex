@@ -45,9 +45,9 @@
 % The following sets up some headers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{MA113 Notes} % Left Header
-\rhead{\thepage} % Right Header
-\cfoot{} % Center Foot (empty)
+\lhead{MA113 Fall 2022} % Left Header
+\rhead{Brady Exoo} % Right Header
+\cfoot{\thepage} % Center Foot (empty)
 \setlist[itemize,1]{label=\textbullet}\setlist[itemize,2]{label=$\circ$}
 
 
@@ -786,7 +786,7 @@ To calculate the area of a region $R$, we evaluate the integral
 This lets us calculate the average value of a function over a region by evaluating the integral
     \[ \frac{\int \int_R f(x,y) \dd{A}}{\int \int_R \dd{A}} .\]
 \subsection{Splitting Regions}
-If we have non-overlapping regions $R = R_1 \cup R_2 \ni R_1 \cap R_2 = \varnothing$ then
+If we have non-overlapping regions $R = R_1 \cup R_2$ such that $R_1 \cap R_2 = \varnothing$ then
 \[\int\int_R f(x,y) \dd{A} = \int\int_{R_1} f(x,y) \dd{A} + \int\int_{R_2} f(x,y) \dd{A}.\]
 
 \subsection{Polar Regions}
@@ -796,7 +796,7 @@ To start, we wish to use double integrals to find the area in some polar functio
 \end{pmatrix} \mapsto \begin{pmatrix}
     r\cos{\theta} \\ r\sin{\theta}
 \end{pmatrix}. \]
-Differentiating this gives us the Jacobian matrix $\mathbf{J}$ of $r(\theta)$
+Differentiating this with respect to our two variables $r$ and $\theta$ gives us the Jacobian matrix $\mathbf{J}$ of $r(\theta)$
 \[ \begin{bmatrix}
     \cos{\theta} & -r\sin{\theta} \\
     \sin{\theta} & r\cos{\theta}
@@ -811,7 +811,14 @@ The Jacobian is a matrix of all the first-order partial derivatives of a vector 
     \dfrac{\partial f_m}{\partial x_1} & \cdots & \dfrac{\partial f_m}{\partial x_n}
 \end{bmatrix}. \]
 In the case of $r(\theta)$, $f_1(\theta) = r\cos{\theta}$ and $f_2(\theta) = r\sin{\theta}$.
-The Jacobian matrix measures the amount of ``stretching'' for each point in some coordinate space $(x,y)$ to another coordinate space $(u,v)$. This is useful to us because in two dimensions, the determinant of the Jacobian is $\frac{\dd{u}\dd{v}}{\dd{x}\dd{y}}$.
+The Jacobian matrix measures some stuff \footnote{Wikipedia says it measures the amount of stretching that the coordinate change imposes} when you change from coordinate space $(x,y)$ to another coordinate space $(u,v)$. This is useful to us because in two dimensions, the determinant of the Jacobian is $\frac{\dd{u}\dd{v}}{\dd{x}\dd{y}}$, allowing us to change variables in double integrals.
+
+\subsection{Triple Integrals}
+Triple integrals are simply a dimension higher than double integrals. The volume of a domain is simply
+\[ V = \int\int\int_D \dd{V} \]
+And the average value of a function over a domain is
+\[ \frac{\int\int\int_D f(x,y,z) \dd{V}}{\int\int\int_D \dd{V}} \]
+where $\dd{V} = \dd{x}\dd{y}\dd{z}$.
 
 
 
