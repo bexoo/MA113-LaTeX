@@ -104,6 +104,7 @@ Notes for MA113 (Mutlivariable Calculus) taught by Dr. Holder.
 
 \section{Coordinate Systems and Polar Functions}
 \epigraph{\itshape ``This is your last chance. After this there is no turning back. You take the blue pill, the story ends. You wake up in your bed and believe whatever you want to. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes.''}{Morpheus, \textit{The Matrix}}
+We begin with a discussion of some two-dimensional coordinate systems.
 
 \subsection{Rectangular Coordinates}
 \begin{itemize}
@@ -360,7 +361,7 @@ Given a matrix
 \]
 The determinant of the matrix is $AD - BC$. This is the area of the parallelogram formed by the vectors $\angled{A,B}$ and $\angled{C,D}$.
 
-\subsubsection{3 by 3}
+\subsubsection{3 by 3} \label{3x3d}
 Given a matrix
 \[
 \begin{bmatrix}
@@ -816,10 +817,64 @@ The Jacobian matrix measures some stuff \footnote{Wikipedia says it measures the
 \subsection{Triple Integrals}
 Triple integrals are simply a dimension higher than double integrals. The volume of a domain is simply
 \[ V = \int\int\int_D \dd{V} \]
-And the average value of a function over a domain is
+and the average value of a function over a domain is
 \[ \frac{\int\int\int_D f(x,y,z) \dd{V}}{\int\int\int_D \dd{V}} \]
 where $\dd{V} = \dd{x}\dd{y}\dd{z}$.
 
+\subsection{Applications}
+\subsubsection{Center of Mass}
+For any object, you can find each coordinate of the center of mass with the formula
+\[ \vv{x} = \frac{\int\int_R x \, \delta(x,y) \dd{A}}{\int\int_R \delta(x,y) \dd{A}} \]
+where $\delta(x,y)$ is the density at a point.
+Note that the total mass is just \[\int\int_R \delta(x,y) \dd{A}.\]
+
+\subsection{Angular Motion}
+Let the equation of a object in circular motion be
+\[ r\left(\theta\right) = \angled{d\cos{\theta},d\sin{\theta}}.\]
+We can now calculate the speed of this object!
+\begin{align*}
+    \dv{r}{t} &= \angled{-d\sin{\theta}\dv{\theta}{t},d\cos{\theta}\dv{\theta}{t}}\\
+    \norm{\dv{r}{t}} &= d\dv{\theta}{t} \\ &= d\omega.
+\end{align*}
+Now the total energy when we rotate some $3$-dimensional shape is
+\begin{align*}
+    &\int\int\int_R \half d^2(x,y,z)\omega^2 \, \delta(x,y,z)\dd{V} \\
+    = \half \omega^2 &\underbrace{\int\int\int_R d^2(x,y,z) \, \delta(x,y,z) \dd{V}}_{\text{Moment of intertia}}
+\end{align*}
+Note the similarities to the equation $E=\half mv^2$. $\omega$ replaces $v$, and moment of inertia replaces $m$.
+
+\subsection{Three Dimensional Coordinate Systems}
+We end \footnote{almost} as we started, with coordinate systems.
+\subsubsection{Rectangular Coordinates}
+Our regular cartesian coordinate system. Coordinates are $(x,y,z)$, you know this.
+
+\subsubsection{Cylindrical Coordinates}
+Coordinates are $(r,\theta,z)$. The $xy$ plane is replaced with polar coordinates. Note that $r$ is not truly the distance from the point to the origin. The Jacobian of the mapping
+\[ \begin{pmatrix} x \\ y \\ z \end{pmatrix} \mapsto \begin{pmatrix} r\cos{\theta} \\ r\sin{\theta} \\ z \end{pmatrix} \]
+is
+\[ \mathbf{J} =
+\begin{bmatrix}
+    \cos{\theta} & -r\sin{\theta} & 0 \\
+    \sin{\theta} & r\cos{\theta} & 0 \\
+    0 & 0 & 1
+\end{bmatrix} \]
+The determinant of this is simply $r$ as shown in section \ref{3x3d}, so
+\[ \dd{V} = r \dd{z} \dd{r} \dd{\theta} \]
+
+\subsubsection{Spherical Coordinates}
+Coordinates are $(\rho,\theta,\phi)$. Imagine $\vv{v}$ is our vector from the origin to the desired point. Then $\phi$ is the angle from the $z\footnote{z \text{doesn't really exist here but we will pretend it does.}}$-axis to $\vv{v}$. $\rho$ is the length of $\vv{v}$, and $\theta$ is the angle from the $x$-axis to the projection of $\vv{v}$ onto the $xy$-plane. The Jacobian of the mapping
+\[ \begin{pmatrix} x \\ y \\ z \end{pmatrix} \mapsto \begin{pmatrix} \rho\sin{\phi}\cos{\theta} \\ \rho\sin{\phi}\sin{\theta} \\ \rho\sin{\phi} \end{pmatrix} \]
+is
+\begin{align*} \mathbf{J} &=
+\begin{bmatrix}
+    \sin{\phi}\cos{\theta} & \rho\cos{\phi}\cos{\theta} & -\rho\sin{\phi}\sin{\theta} \\
+    \rho\sin{\phi}\sin{\theta} & \rho\cos{\phi}\sin{\theta} & \rho\sin{\phi}\cos{\theta} \\
+    \cos{\theta} & -\rho\sin{\phi} & 0
+\end{bmatrix}  \\
+\det{\mathbf{J}} &= \boxed\rho^2\sin{\phi}.
+\end{align*}
+Therefore,
+\[ \dd{V} = \abs{\rho^2\sin{\phi}}\dd{\rho}\dd{\phi}\dd{\theta}. \]
 
 
 
