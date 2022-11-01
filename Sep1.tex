@@ -17,6 +17,7 @@
 \theoremstyle{definition}
 \newtheorem*{claim}{Claim}
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}{Remark}
 % By including [theorem], the lemma follows the numbering of theorem
 % e.g. Thm 1, Lemma 2, Thm 3, Thm 4, \dots
 \theoremstyle{definition}
@@ -27,7 +28,7 @@
 
 % Remarks
 \theoremstyle{remark}
-\newtheorem{remark}{Remark}
+%\newtheorem{remark}{Remark}
 
 
 
@@ -66,7 +67,7 @@
 \newcommand{\angled}[1]{\left\langle {#1} \right\rangle}
 \newcommand{\cbrt}[1]{\sqrt[3]{#1}}
 \newcommand\normx[1]{\Vert#1\Vert}
-\renewcommand\abs[1]{\mid #1 \mid}
+\renewcommand\abs[1]{\left| #1 \right|}
 \newcommand*{\vv}[1]{\overrightarrow{\mkern0mu#1}}
 \renewcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\im}{\hat{i}}
@@ -871,10 +872,26 @@ is
     \rho\sin{\phi}\sin{\theta} & \rho\cos{\phi}\sin{\theta} & \rho\sin{\phi}\cos{\theta} \\
     \cos{\theta} & -\rho\sin{\phi} & 0
 \end{bmatrix}  \\
-\det{\mathbf{J}} &= \boxed\rho^2\sin{\phi}.
+\det{\mathbf{J}} &= \rho^2\sin{\phi}.
 \end{align*}
 Therefore,
-\[ \dd{V} = \abs{\rho^2\sin{\phi}}\dd{\rho}\dd{\phi}\dd{\theta}. \]
+\[ \dd{V} = \left|\rho^2\sin{\phi}\right|\dd{\rho}\dd{\phi}\dd{\theta}. \]
+
+\subsection{Line Integrals}
+We have a curve $C$ on the $xy$ plane and a function $f(x,y)$. The line integral is the area under the curtain formed by the heights of $f$ across the curve $C$. This integral can be expressed as
+\[ \int_C f(x,y) \dd{s} \]
+where $\dd{s}$ is the differential of arclength. Recall that
+\begin{align*}
+    \dv{s}{t} &= \norm{v} \\
+    \dd{s} &= \dv{s}{t} \dd{t} \\
+    &= \norm{v} \dd{t}.
+\end{align*}
+So our previous integral becomes
+\[ \int_a^b f(x(t),y(t)) \norm{v} \dd{t}. \]
+\begin{remark}
+    We can write lines from point $\angled{x_0,y_0}$ to $\angled{x_1,y_1}$ with the formula
+    \[\ell(t) = (1-t)\angled{1,3} t\angled{4,6}.\]
+\end{remark}
 
 
 
