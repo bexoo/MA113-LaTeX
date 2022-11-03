@@ -17,7 +17,6 @@
 \theoremstyle{definition}
 \newtheorem*{claim}{Claim}
 \newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{remark}{Remark}
 % By including [theorem], the lemma follows the numbering of theorem
 % e.g. Thm 1, Lemma 2, Thm 3, Thm 4, \dots
 \theoremstyle{definition}
@@ -28,7 +27,7 @@
 
 % Remarks
 \theoremstyle{remark}
-%\newtheorem{remark}{Remark}
+\newtheorem*{remark}{Remark}
 
 
 
@@ -890,8 +889,46 @@ So our previous integral becomes
 \[ \int_a^b f(x(t),y(t)) \norm{v} \dd{t}. \]
 \begin{remark}
     We can write lines from point $\angled{x_0,y_0}$ to $\angled{x_1,y_1}$ with the formula
-    \[\ell(t) = (1-t)\angled{1,3} t\angled{4,6}.\]
+    \[\ell(t) = (1-t)\angled{x_0,y_0} + t\angled{x_1,y_1}.\]
 \end{remark}
+\subsection{General Change of Variable}
+Imagine we wish to integrate a function on or find the area of the region bounded by the lines
+\begin{align*}
+    y &= -\frac{3}{2}x+1 \\
+    y &= -\frac{3}{2}x+3 \\
+    y &= -\frac{1}{4}x   \\
+    y &= -\frac{1}{4}x+1.
+\end{align*}
+If we use a traditional $xy$ coordinate system, we have to split this region into $3$ integrals! However, if we use the transformations
+\begin{align*}
+    u &= 3x+2y \\
+    v &= x+4y
+\end{align*}
+we only need to use one integral. Alternatively, we could write this as
+\[ \begin{pmatrix} u \\ v \end{pmatrix} = \begin{bmatrix} 3 & 2 \\ 1 & 4 \end{bmatrix} \begin{pmatrix} x \\ y \end{pmatrix}. \]
+Either way, solving for $x$ and $y$, we get
+\begin{align*}
+    x &= \frac{4}{10}u - \frac{2}{10}v \\
+    y &= -\frac{1}{10}u + \frac{3}{10}v.
+\end{align*}
+So, we get the mapping
+\[ \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix}\frac{4}{10}u - \frac{2}{10}v \\ -\frac{1}{10}u + \frac{3}{10}v \end{pmatrix} \implies \mathbf{J} =
+\begin{bmatrix}
+    \frac{4}{10} & -\frac{2}{10} \\
+    -\frac{1}{10} & \frac{3}{10}
+\end{bmatrix} \]
+and
+\[ \det(\mathbf{J}) = \frac{1}{10}. \]
+With this coordinate change, our four equations from before become simply
+\begin{align*}
+    u &= 2 \\
+    u &= 6 \\
+    v &= 0 \\
+    v &= 4.
+\end{align*}
+So the area of the region is
+\[ \int_0^4 \int_2^6 \frac{1}{10} \dd{u} \dd{v}. \]
+
 
 
 
