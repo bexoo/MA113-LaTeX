@@ -1,3 +1,2 @@
 ### MA113 Notes
-Notes for MA113 taught by Dr. Holder, taught during the fall quarter at Rose-Hulman.
-Notes were written in LaTeX, with additional diagrams written separately on paper.
+Notes for MA113 Multivariable Calculus taught by Dr. Holder during the fall quarter at Rose-Hulman
