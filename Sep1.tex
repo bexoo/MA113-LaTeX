@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 % EXAM TUESDAY 6PM
+% Final in room 
 
 % Include math
 \usepackage{amsmath,amsthm,amssymb}
@@ -159,10 +160,10 @@ These coordinates will be helpful for setting up integrals later in the course. 
     \item $r(\theta)=\cos{(2\theta)}$ is a $4-$flower.
     \begin{itemize}
         \item $\cos{(\text{n}\theta)}$ has $2n$ petals if $n$ is even, $n$ petals if $n$ is odd.
+    \end{itemize}
     \item $r = \theta$ is the Archimedes spiral.
     \begin{itemize}
         \item This can be generalized by $r = a\theta$.
-    \end{itemize}
     \end{itemize}
 \end{itemize}
 
@@ -471,7 +472,7 @@ s^\prime(t) & = \frac{d}{dt} \int_{t_1}^t{\norm{\vecv(\tau)}d\tau} \\
 \end{align*}
 
 \subsection{Constant Length}
-If $\vecr(\alpha)$ has the property that $\norm{\vecr(/alpha)} = k$, then
+If $\vecr(\alpha)$ has the property that $\norm{\vecr(\alpha)} = k$, then
 \[ \vecr \cdot \vecr = k^2.\]
 Differentiating, we get
 \[ \vecr^\prime \cdot \vecr + \vecr \cdot \vecr^\prime = 0 \]
@@ -509,7 +510,7 @@ $a_T$ is called the scalar component of acceleration in the tangential direction
 We begin with
 \[ v = \norm{v}\vb{T} \] by the definition of the unit tangent vector.
 Differentiating with respect to time, we get
-\[ a = \left(\ddt \norm{v}\right)\vb{T} + \frac{d \vb{T}}{dt} \norm{v} \]
+\[ a = \left(\ddt \norm{v}\right)\vb{T} + \frac{d \vb{T}}{dt} \norm{v} \vb{N} \]
 We also know that $\kappa = \frac{dT/dt}{\norm{v(t)}}$ or $\frac{dT}{dt} = \kappa \norm{v(t)}$, so we get
 \[ a = \left(\ddt \norm{v}\right)\vb{T} + (\kappa \norm{v}^2)\vb{N}. \]
 
@@ -928,6 +929,7 @@ With this coordinate change, our four equations from before become simply
 \end{align*}
 So the area of the region is
 \[ \int_0^4 \int_2^6 \frac{1}{10} \dd{u} \dd{v}. \]
+
 
 
 
