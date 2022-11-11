@@ -71,11 +71,11 @@
 \contentsline {subsection}{\numberline {6.2}Calculating Areas}{27}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Splitting Regions}{27}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Polar Regions}{27}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Jacobians}{27}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.1}Jacobians}{28}{subsubsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.5}Triple Integrals}{28}{subsection.6.5}%
 \contentsline {subsection}{\numberline {6.6}Applications}{28}{subsection.6.6}%
 \contentsline {subsubsection}{\numberline {6.6.1}Center of Mass}{28}{subsubsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.7}Angular Motion}{28}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.7}Angular Motion}{29}{subsection.6.7}%
 \contentsline {subsection}{\numberline {6.8}Three Dimensional Coordinate Systems}{29}{subsection.6.8}%
 \contentsline {subsubsection}{\numberline {6.8.1}Rectangular Coordinates}{29}{subsubsection.6.8.1}%
 \contentsline {subsubsection}{\numberline {6.8.2}Cylindrical Coordinates}{29}{subsubsection.6.8.2}%
